@@ -36,6 +36,7 @@ function filter_select( $content ) {
 			if ( have_rows( 'list_typology_project' ) ) {
 				$data[ $post->post_name ] = array();
 
+				$index = 0;
 				while ( have_rows( 'list_typology_project' ) ) {
 					the_row();
 
@@ -47,8 +48,10 @@ function filter_select( $content ) {
 					);
 
 					$data[ $post->post_name ][] = array(
+						'type'  => $temp['type'],
 						'label' => implode( ' | ', array( $temp['type'], $temp['dorm'], $temp['area'] ) ),
 						'img'   => $temp['flat'],
+						'index' => $index++,
 					);
 				}
 			}
@@ -82,3 +85,5 @@ function projects_script() {
 </script>
 <?php
 }
+
+remove_action( 'wpcf7_swv_create_schema', 'wpcf7_swv_add_select_enum_rules', 20, 2 );

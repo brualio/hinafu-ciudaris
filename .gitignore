@@ -70,3 +70,5 @@ package-lock.json
 public/assets/css/main.min.css
 
 public/assets/js/main.min.js
+
+custom_debug.txt

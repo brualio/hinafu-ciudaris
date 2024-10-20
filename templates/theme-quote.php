@@ -104,9 +104,10 @@ $image_quote_g_g = $options_g['image_quote_g_g'];
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   //Carrousel
-  let quoteCarrouselID = document.querySelector('.quote--carrousel')
-  if(quoteCarrouselID){
-    var quoteCarrousel = new Swiper(quoteCarrouselID, {
+  let quoteCarrouselID = document.querySelector('.quote--carrousel');
+  let quoteCarrousel;
+  if( quoteCarrouselID ){
+    quoteCarrousel = new Swiper(quoteCarrouselID, {
       loop: false,
       effect: 'fade',
       fadeEffect: {
@@ -115,6 +116,12 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation: {
         nextEl: '.quote--carrousel-next',
         prevEl: '.quote--carrousel-prev',
+      },
+      on:  {
+        slideChange: function() {
+          let index = quoteCarrousel.activeIndex;
+          $( 'select[name=modelo_cotizado]' ).val( $( 'select[name=modelo_cotizado] option' ).eq( index ).val() );
+        }
       }
     });
   }
@@ -129,18 +136,74 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  $( 'select[name=proyecto_cotizado]' ).on( 'change', function( e ) {
+  $( 'select[name=proyecto_cotizado]' ).on( 'change', function() {
+    let cont_modelos = 0;
     let $modelos_select = $( 'select[name=modelo_cotizado]' );
-    $modelos_select.html( '<option value=""></option>' );
+    // $modelos_select.html( '<option value=""></option>' );
+    $modelos_select.html( '' );
+
+    let $swiper_wrapper = $( '.quote--carrousel .swiper-wrapper' );
+    $swiper_wrapper.html( '' );
 
     let option  = $( this ).val();
     let modelos = projects[option];
 
-    modelos.forEach( function( m ) {
-      $modelos_select.append( '<option value="' + m.label + '">' + m.label + '</option>' );
+    $( '.general-input.--select' ).addClass( '---focus' );
+
+    modelos.forEach( function( m, index ) {
+      ++cont_modelos;
+      $modelos_select.append( $('<option>', {
+        value: m.type,
+        text: m.label,
+        'data-slide': m.index,
+        selected: index == 0
+      }) );
+
+      $swiper_wrapper.append( createCarouselItem( m.img ) );
     } );
 
+    if ( cont_modelos > 1 ) {
+      $( '.quote-page-carrousel-arrows' ).css( 'display', 'flex' );
+    }
+
+    quoteCarrousel.slideTo(0);
+
+    setTimeout( function() {
+      quoteCarrousel.update();
+    }, 500 );
   } );
+
+  $( 'select[name=modelo_cotizado]' ).on( 'change', function() {
+    let index = $( this ).find( ':selected' ).data( 'slide' );
+    quoteCarrousel.slideTo( index );
+  } );
+
+  function createCarouselItem( imageSrc ) {
+    const $li = $('<li>', { class: 'swiper-slide' });
+    const $div = $('<div>', { class: 'quote-page-carrousel-item' });
+    const $figure = $('<figure>', { class: 'quote-page-carrousel-item-image' });
+    const $img = $('<img>', {
+      class: 'quote-page-carrousel-item-img',
+      width: 700,
+      height: 431,
+      src: imageSrc,
+      alt: 'Ciudaris'
+    });
+    const $link = $('<a>', {
+      href: imageSrc,
+      class: 'quote-page-carrousel-item-image quote--carrousel-image',
+      style: 'display:none'
+    });
+    const $zoomImg = $img.clone();
+    const $span = $('<span>', { class: 'quote-page-carrousel-item-icon icon-zoom_icon' });
+
+    $figure.append($img);
+    $link.append($zoomImg).append($span);
+    $div.append($figure).append($link);
+    $li.append($div);
+
+    return $li;
+  }
   
 });
 
