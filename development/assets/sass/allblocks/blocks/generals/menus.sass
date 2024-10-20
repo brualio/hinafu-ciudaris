@@ -1,0 +1,46 @@
+
+//menu
+.general-menu
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+	> ul > li > a
+		font-size: 15px
+		color: black
+
+//miga
+.general-miga
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 10px
+		&:after
+			content: ">"
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+	> ul > li > a
+		display: inline-block
+		vertical-align: middle
+		font-size: 15px
+		color: black
+
+.general-social
+	> ul
+		display: flex
+		flex-wrap: wrap
+	> ul > li
+		margin-right: 10px
+		margin-bottom: 5px
+		margin-top: 5px
+	> ul > li > a
+		display: block

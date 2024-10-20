@@ -1,0 +1,18 @@
+.tab-link
+	cursor: pointer
+	&.---active
+		color: red
+
+.tab-content
+	position: relative
+
+.tab-item
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	+hide
+	&.---active
+		position: relative
+		+show

@@ -1,0 +1,65 @@
+.keyframes-example
+	width: 100px
+	height: 50px
+	background: red
+	line-height: 50px
+	color: white
+	position: relative
+	margin-bottom: 20px
+	font-size: 15px
+	text-align: center
+	transition: all .3s ease-in-out
+
+.keyframes-example-simple
+	animation: move_keyframe 2s normal
+
+.keyframes-example-infinite
+	animation: move_keyframe 2s infinite
+
+.keyframes-example-alternate
+	animation: move_keyframe 2s alternate
+
+.keyframes-example-reverse
+	animation: move_keyframe 2s reverse
+
+.keyframes-example-alternate-backwards
+	animation: move_keyframe2 2s alternate backwards
+
+.keyframes-example-alternate-forwards
+	animation: move_keyframe2 2s alternate forwards
+
+@keyframes move_keyframe
+	0%
+		left: 0px
+	50%
+		left: 100px
+	100%
+		left: 0px
+
+@keyframes move_keyframe2
+	0%
+		background: blue
+	100%
+		background: yellow
+
+//Sprite
+.arrow-sprite
+	display: block
+	width: 133px //alto de la imagen a mostrar
+	height: 135px
+	// height 1876px * alto total del sprite
+	//background: url('../images/prueba2.png') 0px 0px no-repeat
+
+@media screen and (min-width: 1025px)
+	.arrow-sprite
+		background-position: 0 -1741px
+		//se resta el alto de la imagen del sprite - Ejm: 1876 - 135 = 1741
+		animation: flecha1 1.3s steps(14) alternate backwards
+		//steps : son las secuencias del sprite - Ejem: 14 secuencias
+
+// keyframes para el sprite
+@keyframes flecha1
+	0%
+		background-position: 0 0
+	100%
+		background-position: 0 -1876px

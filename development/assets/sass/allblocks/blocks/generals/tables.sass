@@ -1,0 +1,189 @@
+.general-table
+	table
+		width: 100%
+	thead
+		th
+			border: 1px solid red
+			padding: 10px 10px
+			box-sizing: border-box
+			font-size: 14px
+			color: blue
+			background: rgba(154,178,191,.3)
+			height: 53px
+			text-align: center
+	tbody
+		td
+			border: 1px solid red
+			box-sizing: border-box
+			text-align: center
+	tfoot
+		td
+			border: 1px solid red
+			box-sizing: border-box
+			text-align: center
+
+//p
+.general-table--p
+	p
+		margin: 0
+	tbody
+		td
+			p
+				display: table-cell
+				vertical-align: middle
+				padding: 10px 10px
+				box-sizing: border-box
+				font-size: 14px
+				color: blue
+				height: 53px
+				width: 2000px
+				text-align: center
+	tfoot
+		td
+			p
+				display: table-cell
+				vertical-align: middle
+				padding: 10px 10px
+				box-sizing: border-box
+				font-size: 14px
+				color: blue
+				height: 53px
+				width: 2000px
+				text-align: center
+
+//default
+.general-table--default
+	tbody
+		td
+			font-size: 14px
+			color: blue
+			padding: 10px 10px
+			box-sizing: border-box
+	tfoot
+		td
+			font-size: 14px
+			color: blue
+			padding: 10px 10px
+			box-sizing: border-box
+
+@media #{$min_768}
+	.general-table
+		&.--two
+			thead
+				th
+					width: 50%
+			tbody
+				td
+					width: 50%
+			tfoot
+				td
+					width: 50%
+
+		&.--three
+			thead
+				th
+					width: 33.33%
+			tbody
+				td
+					width: 33.33%
+			tfoot
+				td
+					width: 33.33%
+
+		&.--four
+			thead
+				th
+					width: 25%
+			tbody
+				td
+					width: 25%
+			tfoot
+				td
+					width: 25%
+
+		&.--five
+			thead
+				th
+					width: 20%
+			tbody
+				td
+					width: 20%
+			tfoot
+				td
+					width: 20%
+
+		&.--six
+			thead
+				th
+					width: 16.666%
+			tbody
+				td
+					width: 16.666%
+			tfoot
+				td
+					width: 16.666%
+
+		&.--scroll-x
+			width: 100%
+			overflow: auto
+			table
+				width: 960px
+
+@media #{$max_767}
+	.general-table--responsive
+		//head
+		thead
+			display: none
+
+		//body
+		tbody tr
+			display: block
+			width: 100%
+			margin-top: 30px
+		tbody td
+			display: block
+			width: 100%
+			border: none
+			border-bottom: 1px solid red
+			border-right: 1px solid red
+			&:first-child
+				border-top: 1px solid red
+
+		// foot
+		tfoot tr
+			display: block
+			width: 100%
+			margin-top: 0
+		tfoot td
+			display: block
+			width: 100%
+			border: none
+			border-bottom: 1px solid red
+			border-right: 1px solid red
+		tfoot tr .general-table-cell
+			border-top: none !important
+		tfoot td:first-child
+			border-top: 1px solid red
+
+		//cell
+		.general-table-cell
+			&:before
+				content: attr(data-text)
+				position: relative
+				top: 0
+				left: 0
+				width: 50%
+				display: table-cell
+				vertical-align: middle
+				background: rgba(154,178,191,.3)
+				vertical-align: middle
+				height: 53p
+				text-align: center
+				color: blue
+				border-left: 1px solid red
+				border-right: 1px solid red
+				padding: 10px
+				box-sizing: border-box
+
+		.general-table .general-table-cell:before
+			font-size: 14px

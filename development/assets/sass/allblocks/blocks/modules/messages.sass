@@ -1,0 +1,112 @@
+.page-message
+  padding-top: 135px
+  padding-bottom: 93px
+  background-color: $color_lightblue4
+  &.page-message--sent
+    padding-top: 29px
+    padding-bottom: 29px
+    .page-message-info
+      width: 44%
+    .page-message-image
+      width: 44.276%
+
+.page-message-content
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.page-message-info
+  width: 31.5%
+
+.page-message-title
+  margin: 0
+
+.page-message-title-text
+  font-family: $Poppins_SemiBold
+  font-size: 130px
+  line-height: 107.692%
+  color: $color_blue
+  margin: 0
+
+.page-message-subtitle
+  margin-top: 20px
+
+.page-message-subtitle-text
+  font-family: $Poppins_Medium
+  font-size: 28px
+  line-height: 121.429%
+  color: $color_lightblue
+  margin: 0
+
+.page-message-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  margin: 0
+  margin-top: 15px
+
+.page-message-button
+  margin-top: 30px
+
+.page-message-image
+  width: 65.145%
+  margin: 0
+
+.page-message-img
+  +imgauto
+
+@media #{$max_1366}
+  .page-message
+    padding-top: 100px
+    padding-bottom: 100px
+
+  .page-message-title-text
+    font-size: 100px
+
+@media #{$max_1024}
+  .page-message-title-text
+    font-size: 80px
+
+  .page-message.page-message--sent
+    padding: 50px 0
+
+  .page-message-info
+    width: 40%
+
+  .page-message-title-text
+    font-size: 70px
+
+  .page-message-subtitle-text
+    font-size: 25px
+
+  .page-message-image
+    width: 55%
+
+@media #{$max_767}
+  .page-message
+    padding: 85px 0
+
+  .page-message-content
+    flex-wrap: wrap
+
+  .page-message-info
+    width: 100%
+    text-align: center
+
+  .page-message-image
+    display: none
+
+  .page-message.page-message--sent
+    padding: 85px 0
+    .page-message-info
+      width: 100%
+
+  .page-message-title-text
+    font-size: 60px
+
+  .page-message-subtitle-text
+    font-size: 23px
+
+  .page-message-text
+    font-size: 16px

@@ -1,0 +1,980 @@
+
+.page-news
+	position: relative
+
+//banner
+.banner-news-container
+	position: relative
+
+.banner-news-image
+	height: 420px
+	+bgcover
+	position: relative
+
+.banner-news-content
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+
+.banner-news-title-text
+	font-family: $Poppins_SemiBold
+	font-size: 52px
+	line-height: 100%
+	color: $color_white
+	margin: 0
+
+.banner-news-text
+	font-family: $Poppins_Medium
+	font-size: 18px
+	line-height: 135%
+	color: $color_white
+	margin-top: 12px
+
+.banner-news-categories
+	margin-bottom: 21px
+
+.banner-news-categories-list
+	> a
+		margin: 4px 8px 4px 0
+		font-family: $Poppins_Medium
+		font-size: 14px
+		color: $color_blue3
+		padding: 5px 10px
+		display: inline-block
+		border-radius: 5px
+		position: relative
+		overflow: hidden
+		transition: $transition
+		background-color: $color_lightblue3
+		letter-spacing: 2px
+		text-transform: uppercase
+		&:hover
+			background-color: $color_lightblue3
+
+.banner-news-date
+	font-family: $Poppins_Regular
+	font-size: 14px
+	letter-spacing: 1px
+	line-height: 142.857%
+	text-transform: uppercase
+	color: $color_white
+	margin-top: 20px
+
+@media #{$max_1450}
+	.banner-news-title-text
+		font-size: 45px
+
+@media #{$max_1024}
+	.banner-news-title-text
+		font-size: 40px
+
+	.banner-news-image
+		height: 400px
+
+@media #{$max_767}
+	.banner-news-title-text
+		font-size: 35px
+
+	.banner-news-image
+		height: 350px
+
+	.banner-news-text
+		font-size: 16px
+		margin-top: 15px
+
+//aside
+.block-news-aside-item
+	margin-bottom: 38px
+	display: block
+	&:last-child
+		margin-bottom: 0
+
+.block-news-aside-title
+	margin-bottom: 19px
+
+.block-news-aside-title-text
+	font-family: $Poppins_Medium
+	font-size: 14px
+	letter-spacing: 2px
+	line-height: 142.857%
+	text-transform: uppercase
+	color: $color_black
+	padding-bottom: 12px
+	position: relative
+	&::before
+		content: " "
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: $color_black
+		opacity: 0.1
+
+.block-news-aside-categories
+	display: flex
+	flex-wrap: wrap
+	> li
+		margin: 4px 8px 4px 0
+	> li > a
+		font-family: $Poppins_Medium
+		font-size: 14px
+		line-height: 142.857%
+		color: $color_blue3
+		padding: 7px 10px
+		display: inline-block
+		border-radius: 5px
+		position: relative
+		overflow: hidden
+		transition: $transition
+		background-color: $color_lightblue3
+		letter-spacing: 2px
+		text-transform: uppercase
+		&:hover
+			background-color: $color_lightblue3
+
+.block-news-aside-recent
+	padding-top: 11px
+
+.block-news-aside-recent-item
+	margin-bottom: 16px
+	display: block
+	position: relative
+	border-radius: 10px
+	overflow: hidden
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		.block-news-aside-recent-item-image
+			+show
+		.block-news-aside-recent-item-info
+			border: 1px solid transparent
+		.block-news-aside-recent-item-title-text
+			color: $color_white
+		.block-news-aside-recent-item-date
+			color: $color_white
+
+.block-news-aside-recent-item-image
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	+bgcover
+	z-index: 1
+	transition: $transition
+	+hide
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%)
+
+.block-news-aside-recent-item-info
+	padding: 21px 30px 19px 30px
+	box-sizing: border-box
+	border-radius: 10px
+	position: relative
+	z-index: 2
+	overflow: hidden
+	border: 1px solid rgba(0, 49, 212, 0.3)
+	box-sizing: border-box
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $color_lightblue4
+		+hide
+
+.block-news-aside-recent-item-title-text
+	font-family: $Poppins_Medium
+	font-size: 18px
+	line-height: 122.222%
+	color: $color_blue3
+	margin: 0
+	transition: $transition
+
+.block-news-aside-recent-item-date
+	font-family: $Poppins_Medium
+	font-size: 14px
+	line-height: 142.857%
+	letter-spacing: 2px
+	color: $color_grey3
+	margin-top: 6px
+	transition: $transition
+	text-transform: uppercase
+
+@media #{$max_1024}
+	.block-news-aside-recent-item-title-text
+		font-size: 17px
+
+	.block-news-aside-title-text
+		font-size: 14px
+
+@media #{$max_767}
+	.block-news-aside-recent-item-title-text
+		font-size: 17px
+
+	.block-news-aside-title-text
+		font-size: 14px
+
+//pagination
+.pagination-wp
+	display: flex
+	align-items: center
+	.prev, .next
+		display: none
+	a, span
+		display: block
+		width: 50px
+		line-height: 50px
+		height: 50px
+		text-align: center
+		border-radius: 100%
+		font-family: $Poppins_Medium
+		font-size: 16px
+		color: $color_blue
+		background: transparent
+		margin: 0
+		transition: $transition
+		cursor: pointer
+		border: 1px solid $color_blue
+		margin: 0 7.5px
+		&:hover
+			background-color: $color_blue
+			color: $color_white
+		&.current
+			background-color: $color_blue
+			color: $color_white
+
+/************ Page ****************/
+.categories-news
+	padding: 20px 0 19px 0
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: blue
+		opacity: 0.1
+
+.categories-news-list
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	flex-wrap: wrap
+	> li
+		padding: 5px 62px 5px 0
+		box-sizing: border-box
+	> li > a
+		font-family: 'Arial'
+		font-size: 20px
+		line-height: 130%
+		color: $color_blue
+		transition: $transition
+		opacity: 0.5
+		&:hover
+			opacity: 1
+	> li.current-cat > a
+		opacity: 1
+
+@media #{$max_1366}
+	.categories-news-list>li>a
+		font-size: 18px
+
+@media #{$max_1024}
+	.categories-news-list>li>a
+		font-size: 18px
+
+@media #{$max_767}
+	.categories-news-list
+		flex-wrap: wrap
+
+	.categories-news-list
+		justify-content: center
+		> li
+			width: 100%
+			padding: 8px 20px
+			text-align: center
+
+	.categories-news-list>li>a
+		font-size: 16px
+
+//page loop aside
+.page-news-loop-aside
+	padding-top: 100px
+	padding-bottom: 80px
+
+.page-news-aside
+	width: 356px
+
+.page-news-loop-aside-container
+	display: flex
+	justify-content: space-between
+
+.page-news-loop
+	width: calc(100% - 356px)
+	padding-right: 58px
+	box-sizing: border-box
+
+.page-news-loop-items
+	display: flex
+	flex-wrap: wrap
+
+.page-news-loop-item
+	width: 48.3%
+	margin-right: 3.3%
+	margin-bottom: 3.3%
+	&:nth-child(2n+2)
+		margin-right: 0
+
+.page-news-pagination
+	margin-top: 20px
+	.pagination-wp
+		justify-content: center
+
+.page-news-publicity
+	max-width: 348px
+	width: 100%
+	margin: auto
+	margin-top: 30px
+	display: block
+
+.page-news-publicity-img
+	+imgfull
+
+@media #{$max_1450}
+	.page-news-loop
+		padding-right: 50px
+		width: calc(100% - 300px)
+
+	.page-news-aside
+		width: 300px
+
+@media #{$max_1024}
+	.page-news-loop-aside-container
+		flex-wrap: wrap
+
+	.page-news-loop-aside
+		padding-top: 70px
+		padding-bottom: 70px
+
+	.page-news-loop
+		padding-right: 0
+		width: 100%
+
+	.page-news-aside
+		width: 100%
+		padding-top: 50px
+
+	.page-news-circle-1
+		display: none
+
+	.page-news-circle-3
+		display: none
+
+@media #{$max_767}
+	.page-news-loop-aside
+		padding: 60px 0
+
+	.page-news-loop-item
+		width: 100%
+		margin-right: 0
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+
+	.page-news-pagination
+		margin-top: 30px
+
+/************* News ***************/
+.detail-news
+	#ez-toc-container
+		padding: 0
+		box-shadow: none
+		border: none
+		overflow: hidden
+		border-radius: 10px
+		background-color: $color_lightblue3
+		margin-bottom: 40px
+	.ez-toc-title-container
+		padding: 17px 17px 10px 16px
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+		overflow: hidden
+	div#ez-toc-container .ez-toc-title
+		font-family: $Poppins_Medium
+		font-size: 14px
+		line-height: 142.857%
+		letter-spacing: 2px
+		color: $color_black
+		text-transform: uppercase
+	#ez-toc-container nav
+		padding: 35px 17px
+	#ez-toc-container ul
+		border-left: 1px solid $color_grey
+	.ez-toc-counter nav ul li a::before
+		display: none
+	#ez-toc-container a.ez-toc-toggle
+		display: none
+	#ez-toc-container a:visited
+		color: $color_grey4
+	#ez-toc-container a
+		font-family: $Poppins_Medium
+		font-size: 16px
+		line-height: 137.5%
+		color: $color_grey4
+		padding-left: 24px
+		transition: $transition
+		border-left: 4px solid transparent
+		&:hover
+			color: $color_blue7
+			text-decoration: none
+			border-left: 4px solid $color_blue7
+
+	div#ez-toc-container ul li
+		margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0
+
+.detail-news-content-aside
+	padding-top: 80px
+	padding-bottom: 70px
+
+.detail-news-content-share-aside
+	display: flex
+	justify-content: space-between
+	box-sizing: border-box
+	flex-direction: row-reverse
+
+.detail-news-content-share
+	width: calc(100% - 353px)
+	padding-left: 61px
+	box-sizing: border-box
+
+.detail-news-content
+	#ez-toc-container
+		display: none
+
+.detail-news-aside
+	width: 353px
+
+.details-news-toc-mobile
+	#ez-toc-container
+		display: none
+
+@media #{$max_1450}
+	.detail-news-content-share
+		width: calc(100% - 300px)
+
+	.detail-news-aside
+		width: 300px
+
+@media #{$max_1366}
+	.detail-news-content-share-aside
+		padding-left: 0
+
+@media #{$max_1024}
+	.detail-news-content-share-aside
+		flex-wrap: wrap
+
+	.detail-news-content-share
+		padding-left: 0
+		width: 100%
+
+	.detail-news-aside
+		width: 100%
+		padding-top: 50px
+
+	.detail-news-content-aside
+		padding-top: 70px
+		padding-bottom: 70px
+
+	.detail-news-aside
+		#ez-toc-container
+			display: none
+
+	.details-news-toc-mobile
+		#ez-toc-container
+			display: block
+
+@media #{$max_767}
+	.detail-news-content-aside
+		padding-top: 50px
+
+	.detail-news-content-aside
+		padding-top: 60px
+		padding-bottom: 60px
+
+.banner-news--detail
+	.banner-news-title-text
+		font-size: 46px
+		line-height: 113.043%
+
+@media #{$max_1450}
+	.banner-news--detail
+		.banner-news-title-text
+			font-size: 40px
+
+@media #{$max_1366}
+	.banner-news--detail
+		.banner-news-title-text
+			font-size: 35px
+
+@media #{$max_1024}
+	.banner-news--detail
+		.banner-news-title-text
+			font-size: 30px
+
+@media #{$max_767}
+	.banner-news--detail
+		.banner-news-title-text
+			font-size: 25px
+
+//Styles
+.--styles-editor
+	color: $color_black2
+	font-family: $Poppins_Regular
+	line-height: 150%
+	font-size: 16px
+	+clearfix
+	a
+		color: $color_blue
+	h1, h2, h3, h4, h5, h6
+		font-family: $Poppins_SemiBold
+		line-height: 133.333%
+		color: $color_black2
+		margin: 0 0 18px 0
+	h1
+		font-size: 20px
+	h2
+		font-size: 18px
+	h3
+		font-size: 18px
+	h4
+		font-size: 16px
+	h5
+		font-size: 16px
+	h6
+		font-size: 14px
+	li > ul, li > ol
+		padding: 15px 0 15px 25px
+	li > ul:last-child, li > ol:last-child
+		padding-bottom: 0
+	ul
+		padding-left: 25px
+		li
+			margin-bottom: 8px
+			list-style: inherit
+	ol
+		padding-left: 25px
+		li
+			margin-bottom: 19px
+			list-style: inherit
+	p
+		margin: 0 0 23px
+	iframe
+		width: 100%
+		max-width: 560px
+	img
+		max-width: 100%
+		height: auto
+	blockquote
+		background: silver
+		padding: 20px
+		margin: 10px 0
+		p:last-child
+			margin: 0
+	table
+		width: auto
+	td
+		border: 1px solid $color_white
+		padding: 5px
+	.left
+		text-align: left
+	.right
+		text-align: right
+	.center
+		text-align: center
+	.alignleft
+		display: inline
+		float: left
+		margin: 1em 1em 1em 0
+	.alignright
+		display: inline
+		float: right
+		margin: 1em 0 1em 1em
+	.aligncenter
+		clear: both
+		display: block
+		margin-left: auto
+		margin-right: auto
+
+@media #{$max_1024}
+	//Styles
+	.--styles-editor
+		font-size: 16px
+		h1
+			font-size: 18px
+		h2
+			font-size: 18px
+		h3
+			font-size: 18px
+		h4
+			font-size: 16px
+		h5
+			font-size: 16px
+		h6
+			font-size: 16px
+
+@media #{$max_767}
+	//Styles
+	.--styles-editor
+		font-size: 15px
+		h1
+			font-size: 16px
+		h2
+			font-size: 16px
+		h3
+			font-size: 16px
+		h4
+			font-size: 15px
+		h5
+			font-size: 15px
+		h6
+			font-size: 15px
+		.alignleft
+			display: block
+			margin: 15px
+
+		.alignright
+			display: block
+			margin: 15px
+
+//Share
+.detail-news-share
+	display: flex
+	align-items: center
+	margin-top: 40px
+
+.detail-news-share-label
+	font-family: $Poppins_Medium
+	font-size: 14px
+	line-height: 142.857%
+	color: $color_black2
+	letter-spacing: 2px
+	text-transform: uppercase
+
+.detail-news-share-list
+	margin-left: 17px
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 17px
+		&:last-child
+			margin-right: 0
+	> ul > li > a
+		width: 27px
+		height: 27px
+		line-height: 27px
+		text-align: center
+		border-radius: 100%
+		font-size: 20px
+		display: block
+		color: $color_blue
+		transition: $transition
+		box-sizing: border-box
+		&:hover
+			color: $color_blue
+
+.detail-news-author
+	border-radius: 10px
+	background-color: $color_white
+	padding: 22px 50px 19px 50px
+	display: flex
+	align-items: center
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10)
+	overflow: hidden
+	margin-top: 40px
+
+.detail-news-author-image
+	margin: 0
+	border-radius: 100%
+	overflow: hidden
+	width: 80px
+	height: 80px
+	img
+		+imgfull
+
+.detail-news-author-info
+	width: calc(100% - 80px)
+	padding-left: 25px
+	box-sizing: border-box
+
+.detail-news-author-name-rol-social
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-bottom: 10px
+	border-bottom: 1px solid $color_grey
+
+.detail-news-author-name
+	font-family: $Poppins_Medium
+	font-size: 20px
+	line-height: 130%
+	color: $color_black2
+
+.detail-news-author-rol
+	font-family: $Poppins_Medium
+	font-size: 14px
+	line-height: 142.857%
+	color: $color_blue
+	letter-spacing: 2px
+	text-transform: uppercase
+
+.detail-news-author-social
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 16px
+		&:last-child
+			margin-right: 0
+	> ul > li > a
+		width: 27px
+		height: 27px
+		line-height: 27px
+		color: $color_blue
+		font-size: 20px
+
+.detail-news-author-description
+	font-family: $Poppins_Regular
+	font-size: 16px
+	line-height: 150%
+	color: $color_grey3
+	padding-top: 10px
+
+@media #{$max_1024}
+	.detail-news-author
+		padding: 20px 20px
+
+@media #{$max_767}
+	.detail-news-author
+		padding: 20px 20px
+		flex-wrap: wrap
+
+	.detail-news-author-info
+		width: 100%
+		padding-left: 0
+		padding-top: 20px
+
+	.detail-news-author-name
+		font-size: 18px
+
+	.detail-news-author-description
+		font-size: 15px
+
+@media #{$max_480}
+	.detail-news-author-name-rol-social
+		flex-wrap: wrap
+
+	.detail-news-author-name-rol
+		width: 100%
+
+	.detail-news-author-social
+		margin-top: 20px
+
+.detail-news-publicity
+	display: block
+	margin-top: 40px
+
+.detail-news-publicity-img
+	+imgfull
+
+@media #{$max_1024}
+	.detail-news-share-label
+		font-size: 18px
+
+	.detail-news-share-list>ul>li>a
+		width: 45px
+		height: 45px
+		line-height: 45px
+		font-size: 22px
+
+@media #{$max_767}
+	.detail-news-share-label
+		font-size: 16px
+
+	.detail-news-share-list>ul>li>a
+		width: 40px
+		height: 40px
+		line-height: 40px
+		font-size: 20px
+
+//rel
+.detail-news-rel
+	padding-bottom: 88px
+
+.detail-news-rel-container
+	border-top: 1px solid $color_grey
+
+.detail-news-rel-title
+	text-align: center
+	padding-top: 58px
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		width: calc(100% - 44px)
+		height: 1px
+		background-color: $color_blue
+		opacity: 0.2
+
+.detail-news-rel-title-text
+	font-family: 'Arial'
+	font-size: 23px
+	line-height: 126.087%
+	color: $color_blue
+	margin: 0
+
+.detail-news-rel-items
+	display: flex
+	flex-wrap: wrap
+	margin-top: 34px
+
+.detail-news-rel-item
+	width: 31.7%
+	margin-right: 2.4%
+	&:nth-child(3n+3)
+		margin-right: 0
+
+@media #{$max_1024}
+	.detail-news-rel
+		padding-bottom: 60px
+
+	.detail-news-rel-title-text
+		font-size: 23px
+
+	.detail-news-rel-items
+		justify-content: center
+
+	.detail-news-rel-item
+		width: 48%
+		margin-right: 4% !important
+		margin-bottom: 4%
+		&:nth-child(2n+2)
+			margin-right: 0 !important
+
+@media #{$max_767}
+	.detail-news-rel
+		padding-bottom: 50px
+
+	.detail-news-rel-title
+		padding-top: 50px
+
+	.detail-news-rel-title:before
+		width: 100%
+
+	.detail-news-rel-title-text
+		font-size: 23px
+
+	.detail-news-rel-item
+		width: 100%
+		margin-bottom: 25px
+		margin-right: 0 !important
+		&:last-child
+			margin-bottom: 0
+
+//nav
+.detail-news-nav-items
+	display: flex
+
+.detail-news-nav-item
+	width: 50%
+	position: relative
+	overflow: hidden
+	&:hover
+		.detail-news-nav-item-image
+			transform: scale(1.1)
+
+.detail-news-nav-item.---full
+	width: 100%
+
+.detail-news-nav-item-image
+	height: 295px
+	+bgcover
+	position: relative
+	transition: $transition
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: black
+		opacity: 0.3
+		z-index: 1
+
+.detail-news-nav-item-info
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	z-index: 2
+	padding: 40px 30px
+	box-sizing: border-box
+
+.detail-news-nav-item-label-title
+	max-width: 334px
+	width: 100%
+	margin: auto
+
+.detail-news-nav-item-label
+	font-family: 'Arial'
+	font-size: 16px
+	line-height: 1.25
+	color: $color_white
+
+.detail-news-nav-item-title
+	margin-top: 9px
+
+.detail-news-nav-item-title-text
+	font-family: 'Arial'
+	font-size: 18px
+	line-height: 1.4
+	color: $color_white
+	margin: 0
+
+@media #{$max_767}
+	.detail-news-nav-items
+		flex-wrap: wrap
+
+	.detail-news-nav-item
+		width: 100%
+
+	.detail-news-nav-item-label
+		font-size: 15px
+
+	.detail-news-nav-item-title-text
+		font-size: 16px

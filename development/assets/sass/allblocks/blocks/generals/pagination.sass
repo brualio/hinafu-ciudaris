@@ -1,0 +1,144 @@
+.general-pagination
+	ul
+		display: flex
+		align-items: center
+	li.-page
+		a
+			display: block
+			width: 40px
+			line-height: 40px
+			height: 40px
+			text-align: center
+			border-radius: 100%
+			font-size: 15px
+			border: 2px solid black
+			color: black
+			background: transparent
+			margin: 0 6px
+			transition: all .25s ease-in-out
+			cursor: pointer
+			&:hover
+				background: black
+			&.active
+				background: black
+	li.-previous, li.-next
+		margin: 0
+		a
+			display: block
+			width: 40px
+			line-height: 40px
+			height: 40px
+			text-align: center
+			font-size: 15px
+			border: 2px solid black
+			color: black
+			background: transparent
+			margin: 0 6px
+			transition: all .25s ease-in-out
+			cursor: pointer
+			&:hover
+				background: black
+			&.active
+				background: black
+
+@media #{$max_1024}
+	.general-pagination
+		li.-page
+			a
+				width: 35px
+				height: 35px
+				line-height: 35px
+				font-size: 14px
+		li.-previous, li.-next
+			a
+				width: 35px
+				height: 35px
+				line-height: 35px
+				font-size: 14px
+
+@media #{$max_767}
+	.general-pagination
+		li.-page
+			a
+				width: 30px
+				height: 30px
+				line-height: 30px
+				font-size: 14px
+		li.-previous, li.-next
+			a
+				width: 30px
+				height: 30px
+				line-height: 30px
+				font-size: 13px
+
+.general-pagination-slide
+	margin: 0
+	padding: 0
+	&.--type1
+		.swiper-pagination-bullet
+			background: none
+			position: relative
+			width: 38px
+			height: 38px
+			margin: 0 5px
+			border: 1px solid transparent
+			transition: $transition
+			border-radius: 100%
+			opacity: 1
+			&::before
+				content: " "
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				width: 7px
+				height: 7px
+				background-color: $color_blue
+				border-radius: 100%
+			&.swiper-pagination-bullet-active
+				border: 1px solid $color_blue
+			&:hover
+				border: 1px solid $color_blue
+	&.--type2
+		.swiper-pagination-bullet
+			background: none
+			position: relative
+			width: 38px
+			height: 38px
+			margin: 0 5px
+			border: 1px solid transparent
+			transition: $transition
+			border-radius: 100%
+			opacity: 1
+			&::before
+				content: " "
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				width: 7px
+				height: 7px
+				background-color: $color_white
+				border-radius: 100%
+			&.swiper-pagination-bullet-active
+				border: 1px solid $color_white
+			&:hover
+				border: 1px solid $color_white
+
+@media #{$max_767}
+	.general-pagination-slide.--type1 .swiper-pagination-bullet
+		width: 26px
+		height: 26px
+	.general-pagination-slide.--type1 .swiper-pagination-bullet::before
+		width: 5px
+		height: 5px
+	.general-pagination-slide.--type2 .swiper-pagination-bullet
+		width: 26px
+		height: 26px
+	.general-pagination-slide.--type2 .swiper-pagination-bullet::before
+		width: 5px
+		height: 5px

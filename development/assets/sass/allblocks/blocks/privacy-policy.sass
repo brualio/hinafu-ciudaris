@@ -1,0 +1,116 @@
+
+.terms-page
+  padding-top: 100px
+  padding-bottom: 85px
+  background-color: $color_lightblue4
+
+.terms-page-title
+  text-align: center
+  margin-bottom: 45px
+
+.terms-page-content
+  max-width: 1174px
+  width: 100%
+  margin: auto
+
+.terms-page-editor
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  margin: 0
+  +clearfix
+  a
+    color: $color_blue
+  h1, h2, h3, h4, h5, h6
+    font-family: $Poppins_Medium
+    color: $color_blue
+    font-size: 25px
+    margin-bottom: 26px
+  h2
+    font-size: 14px
+    line-height: 142.857%
+    font-family: $Poppins_Medium
+    color: $color_blue3
+    letter-spacing: 2px
+    text-transform: uppercase
+  h3
+    font-size: 20px
+  li > ul, li > ol
+    padding: 15px 0 15px 25px
+  li > ul:last-child, li > ol:last-child
+    padding-bottom: 0
+  ul
+    padding-left: 25px
+    li
+      margin-bottom: 8px
+      list-style: inherit
+  ol
+    padding-left: 25px
+    li
+      margin-bottom: 19px
+      list-style: inherit
+  iframe
+    width: 100%
+    max-width: 560px
+  img
+    max-width: 100%
+    height: auto
+  blockquote
+    background: $color_lightblue3
+    padding: 20px
+    margin: 10px 0
+    p:last-child
+      margin: 0
+  table
+    width: auto
+    thead
+      td
+        text-transform: uppercase
+        font-family: $Poppins_Medium
+        color: $color_blue2
+        letter-spacing: 2px
+  td
+    border: 1px solid $color_lightblue
+    padding: 26px 50px
+  .left
+    text-align: left
+  .right
+    text-align: right
+  .center
+    text-align: center
+  .alignleft
+    display: inline
+    float: left
+    margin: 1em 1em 1em 0
+  .alignright
+    display: inline
+    float: right
+    margin: 1em 0 1em 1em
+  .aligncenter
+    clear: both
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+@media #{$max_1024}
+  .terms-page
+    padding-top: 70px
+    padding-bottom: 55px
+
+@media #{$max_767}
+  .terms-page
+    padding-top: 60px
+    padding-bottom: 45px
+
+  .terms-page-editor
+    table
+      display: block
+      width: 100%
+      overflow-x: auto
+      height: auto !important
+    td, th
+      min-width: 100px
+      max-width: 200px
+    td
+      padding: 20px 15px

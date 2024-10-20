@@ -1,0 +1,83 @@
+
+.complaints-book
+  padding-top: 100px
+  padding-bottom: 110px
+
+.complaints-book-content
+  max-width: 1156px
+  width: 100%
+  margin: auto
+
+.complaints-book-title
+  text-align: center
+  .general-title-text
+    margin-top: 30px
+
+.complaints-book-details
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  margin-top: 43px
+
+.complaints-book-detail-item
+  border-radius: 30px
+  background-color: $color_lightblue3
+  padding: 8px 33px
+  width: 47.5%
+  margin-right: 5%
+  display: flex
+  align-items: center
+  justify-content: space-around
+  &:last-child
+    margin-right: 0
+  &.--column
+    flex-direction: column
+    text-align: center
+    .complaints-book-detail-item-text
+      font-size: 12px
+
+.complaints-book-detail-item-title
+  font-family: $Poppins_Medium
+  color: $color_blue3
+  font-size: 14px
+  line-height: 142.857%
+  letter-spacing: 2px
+  text-transform: uppercase
+  margin: 0
+
+.complaints-book-detail-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  color: $color_black
+  line-height: 150%
+  margin: 0
+
+.complaints-book-form
+  .form-block
+    margin-top: 40px
+  .--complaints-file
+    margin-top: 15px
+  .form-block-checkbox
+    margin-top: 18px
+  .form-block-button
+    .general-button
+      max-width: 135px
+      width: 100%
+      .general-button-text
+        width: 100%
+
+@media #{$max_767}
+  .complaints-book
+    padding-top: 60px
+    padding-bottom: 60px
+
+  .complaints-book-details
+    flex-wrap: wrap
+    margin-top: 40px
+
+  .complaints-book-detail-item
+    width: 100%
+    margin: 0
+    margin-bottom: 15px
+    &:last-child
+      margin-bottom: 0

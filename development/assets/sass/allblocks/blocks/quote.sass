@@ -1,0 +1,150 @@
+.quote-page
+  overflow: hidden
+
+.quote-page-banner
+  .main-banner-info-content
+    width: 46%
+    padding-bottom: 46px
+    padding-top: 103px
+    padding-right: 20px
+    box-sizing: border-box
+  .main-banner-figure
+    padding-bottom: 35px
+
+.quote-page-banner-title
+  .general-title-subtitle
+    margin-top: 15px
+
+.quote-page-form-carrousel-block
+  display: flex
+  justify-content: space-between
+
+.quote-page-form
+  background-color: $color_blue
+  padding-top: 71px
+  padding-bottom: 87px
+  padding-right: 76px
+  box-sizing: border-box
+  width: 46%
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 100%
+    width: 100%
+    height: 100%
+    background-color: $color_blue
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 100%
+    width: 100%
+    height: 100%
+    background-color: $color_blue
+    +hide
+  .form-block-pie
+    margin-top: 5px
+  .form-block-checkbox
+    margin-top: 10px
+  .form-block-button
+    .general-button
+      max-width: 125px
+      width: 100%
+      margin: 0
+    .general-button-text
+      width: 100%
+
+.quote-page-form-title
+  margin-bottom: 22px
+
+.quote-page-form-title-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_white
+  margin: 0
+
+.quote-page-carrousel
+  width: 54%
+  padding-left: 75px
+  padding-top: 102px
+  box-sizing: border-box
+
+.quote-page-carrousel-slide
+  overflow: hidden
+
+.quote-page-carrousel-arrows
+  margin-top: 33px
+  justify-content: flex-end
+  .general-arrow
+    margin-right: 13px
+    &:last-child
+      margin-right: 0
+
+.quote-page-carrousel-item-image
+  margin: 0
+  display: block
+  position: relative
+
+.quote-page-carrousel-item-img
+  +imgfull
+
+.quote-page-carrousel-item-icon
+  width: 60px
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $color_white
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 22px
+
+@media #{$max_1366}
+  .quote-page-form
+    padding-top: 50px
+    padding-bottom: 50px
+    padding-right: 50px
+
+  .quote-page-carrousel
+    padding-left: 50px
+    padding-top: 50px
+
+@media #{$max_1024}
+  .quote-page-banner .main-banner-info-content
+    padding-top: 70px
+    padding-bottom: 45px
+
+@media #{$max_960}
+  .quote-page-banner .main-banner-info-content
+    width: 100%
+
+  .quote-page-form-carrousel-block
+    flex-wrap: wrap
+
+  .quote-page-form
+    width: 100%
+    padding-right: 0
+    &::after
+      +show
+
+  .quote-page-carrousel
+    width: 100%
+    padding-left: 0
+    padding-top: 50px
+    padding-bottom: 50px
+
+@media #{$max_767}
+  .quote-page-banner .main-banner-info-content
+    padding-top: 65px
+    padding-bottom: 45px
+
+  .quote-page-carrousel-item-icon
+    width: 50px
+    height: 50px
+    font-size: 18px

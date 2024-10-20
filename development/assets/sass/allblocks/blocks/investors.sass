@@ -1,0 +1,404 @@
+
+.page-investors-banner
+  overflow: hidden
+
+.page-investors-banner-background
+  height: 800px
+  position: relative
+  +bgcover
+
+.page-investors-banner-content
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 800px
+
+.page-investors-banner-content-container
+  height: 100%
+
+.page-investors-banner-inside
+  height: 100%
+  display: flex
+  align-items: center
+  z-index: 2
+  position: relative
+
+.page-investors-banner-title-text
+  font-family: $Poppins_Medium
+  font-size: 52px
+  line-height: 111.538%
+  color: $color_white
+  margin: 0
+
+.page-investors-banner-subtitle
+  margin-top: 14px
+
+.page-investors-banner-subtitle-text
+  font-family: $Poppins_Medium
+  font-size: 34px
+  line-height: 123.529%
+  color: $color_lightblue
+  margin: 0
+
+.page-investors-banner-buttons
+  margin-top: 28px
+  display: flex
+  align-items: center
+
+.page-investors-banner-button
+  margin-right: 50px
+  &:last-child
+    margin-right: 0
+
+.page-investor-banner-pie
+  font-family: $Poppins_Regular
+  font-size: 10px
+  line-height: 110%
+  color: $color_white
+  position: absolute
+  bottom: 33px
+  left: 0
+  width: 100%
+
+@media #{$max_1680}
+  .page-investors-banner-title-text
+    font-size: 45px
+
+  .page-investors-banner-subtitle-text
+    font-size: 30px
+
+@media #{$max_1024}
+  .page-investors-banner-title-text
+    font-size: 40px
+
+  .page-investors-banner-subtitle-text
+    font-size: 25px
+
+@media #{$max_767}
+  .page-investors-banner-info
+    padding-bottom: 125px
+
+  .page-investors-banner-title-text
+    font-size: 28px
+
+  .page-investors-banner-subtitle-text
+    font-size: 20px
+
+  .page-investors-banner-buttons
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+
+  .page-investors-banner-button
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+
+//List
+.page-investor-list
+  padding-top: 128px
+  padding-bottom: 150px
+
+.page-investor-list-title
+  margin-bottom: 76px
+  text-align: center
+
+.page-investor-list-items
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.page-investor-list-item
+  width: 232.562px
+  width: 19%
+  margin: 0
+
+.page-investor-list-item-icon
+  width: 75px
+  height: 75px
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $color_blue
+
+.page-investor-list-item-icon-img
+  +imgauto
+
+.page-investor-list-item-text
+  margin-top: 30px
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+
+@media #{$max_1280}
+  .page-investor-list-item
+    width: 22%
+
+@media #{$max_1024}
+  .page-investor-list
+    padding-top: 75px
+    padding-bottom: 75px
+
+  .page-investor-list-title
+    margin-bottom: 50px
+
+@media #{$max_768}
+  .page-investor-list
+    padding-bottom: 50px
+
+  .page-investor-list-items
+    flex-wrap: wrap
+
+  .page-investor-list-item
+    width: 45%
+    margin-bottom: 25px
+
+@media #{$max_767}
+  .page-investor-list
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .page-investor-list-title
+    margin-bottom: 40px
+
+@media #{$max_480}
+  .page-investor-list-item
+    width: 100%
+
+//numbers
+.page-investors-numbers
+  +bgcover
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $color_lightblue3
+    opacity: 0.9
+    display: none
+
+.page-investors-numbers-container
+  position: relative
+
+.page-investors-numbers-inside
+  height: 700px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+
+.page-investors-numbers-info
+  width: 442px
+  margin-right: auto
+  margin-left: 0
+
+.page-investors-numbers-title
+  .general-title-subtitle
+    margin-top: 12px
+
+.page-investors-numbers-numbers
+  display: flex
+  padding-top: 40px
+  box-sizing: border-box
+  position: relative
+
+.page-investors-numbers-detail
+  margin-right: 100px
+  &:last-child
+    margin-right: 0
+
+.page-investors-numbers-number-txt
+  font-family: $Poppins_Regular
+  font-size: 52px
+  line-height: 100%
+  color: $color_black2
+
+.page-investors-numbers-symbol
+  font-family: $Poppins_Regular
+  font-size: 52px
+  line-height: 100%
+  color: $color_lightblue
+
+.page-investors-numbers-number-text
+  margin-top: 9px
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_black2
+
+@media #{$max_1366}
+  .page-investors-numbers-number-txt
+    font-size: 40px
+
+  .page-investors-numbers-symbol
+    font-size: 40px
+
+@media #{$max_1024}
+  .page-investors-numbers-info
+    width: 400px
+
+  .page-investors-numbers-detail
+    margin-right: 70px
+
+@media #{$max_960}
+  .page-investors-numbers
+    padding-top: 120px
+    padding-bottom: 120px
+    &::before
+      display: block
+
+  .page-investors-numbers-inside
+    height: auto
+
+@media #{$max_767}
+  .page-investors-numbers
+    padding-top: 75px
+    padding-bottom: 75px
+
+  .page-investors-numbers-number-text
+    font-size: 16px
+
+@media #{$max_640}
+  .page-investors-numbers-numbers
+    flex-wrap: wrap
+    flex-direction: column
+
+  .page-investors-numbers-detail
+    margin-right: 0
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+//Carrousel
+.page-investors-carrousel
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%), url(<path-to-image>) lightgray 0px -277.789px / 100% 138.229% no-repeat
+  overflow: hidden
+
+.page-investors-carrousel-container
+  padding-top: 76px !important
+  padding-bottom: 80px !important
+
+.page-investors-carrousel-title
+  text-align: center
+  margin-bottom: 34px
+
+.investors-carrousel-pagination
+  padding-top: 54px
+  text-align: center
+
+.page-investors-carrousel-block-arrows-list
+  position: relative
+
+.page-investors-carrousel-arrows
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  z-index: 2
+  pointer-events: none
+  .general-arrow
+    pointer-events: auto
+
+.page-investors-carrousel-item
+  padding: 0 90px
+  box-sizing: border-box
+
+.page-investors-item-image
+  margin: 0
+
+.page-investors-carrousel-item-img
+  +imgauto
+
+.page-investors-plants2,.page-investors-plants1
+  position: absolute
+
+.page-investors-plants1
+  top: 0
+  left: -80px
+
+.page-investors-plants2
+  bottom: 0
+  right: -80px
+
+@media #{$max_1024}
+  .page-investors-carrousel-container
+    padding-top: 75px !important
+    padding-bottom: 75px !important
+
+@media #{$max_767}
+  .page-investors-carrousel-container
+    padding-top: 65px !important
+    padding-bottom: 65px !important
+
+  .page-investors-carrousel-arrows
+    display: none
+
+  .page-investors-carrousel-item
+    padding: 0
+
+  .investors-carrousel-pagination
+    padding-top: 45px
+
+//Rel
+.page-investors-rel
+  padding-top: 101px
+  padding-bottom: 80px
+
+.page-investors-rel-title-button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 42px
+
+.page-investors-rel-items
+  display: flex
+
+.page-investors-rel-item
+  width: 31.33%
+  margin-right: 3%
+  &:nth-child(3n+3)
+    margin-right: 0
+
+@media #{$max_1024}
+  .page-investors-rel
+    padding-top: 75px
+    padding-bottom: 75px
+
+@media #{$max_960}
+  .page-investors-rel-items
+    flex-wrap: wrap
+
+  .page-investors-rel-item
+    width: 48.5%
+    margin-right: 3% !important
+    margin-bottom: 3%
+    &:nth-child(2n+2)
+      margin-right: 0 !important
+
+@media #{$max_767}
+  .page-investors-rel-title-button
+    flex-direction: column
+    align-items: flex-start
+
+  .page-investors-rel-button
+    margin-top: 25px
+
+  .page-investors-rel
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .page-investors-rel-item
+    width: 100%
+    margin-right: 0 !important
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0

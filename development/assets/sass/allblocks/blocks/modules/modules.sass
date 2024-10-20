@@ -1,0 +1,544 @@
+@import "main_banner"
+@import "slider_principal"
+@import "messages"
+
+.aboutus-general
+  padding-top: 49px
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat
+
+.aboutus-general-plants1,.aboutus-general-plants2
+  position: absolute
+
+.aboutus-general-plants1
+  right: -50px
+  top: 150px
+
+.aboutus-general-plants2
+  right: -75px
+  top: -49px
+
+.aboutus-general-plants1-img,.aboutus-general-plants2-img
+  +imgauto
+
+.aboutus-general-image-info
+  display: flex
+  padding-right: 11px
+  box-sizing: border-box
+
+.aboutus-general-image
+  width: 612px
+  width: 45.535%
+  position: relative
+  left: -76px
+  margin: 0
+  display: flex
+  align-items: flex-end
+
+.aboutus-general-image-img
+  +imgauto
+  margin: 0
+
+.aboutus-general-info
+  width: 803px
+  width: 62%
+  padding-top: 59px
+  padding-bottom: 50px
+
+.aboutus-general-title-logotipos
+  display: flex
+  align-items: stretch
+  padding-bottom: 48px
+
+.aboutus-general-title
+  padding-right: 24px
+  padding-left: 34px
+  box-sizing: border-box
+  .general-title-subtitle
+    max-width: 470px
+    width: 100%
+    margin: 0
+    margin-top: 10px
+  .general-title-text
+    margin-top: 20px
+    text-align: justify
+  .general-title-buttons
+    margin-top: 33px
+
+.aboutus-general-logotipos
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+.aboutus-general-logotipo
+  margin: 0
+
+.aboutus-general-details
+  display: flex
+  justify-content: space-between
+  padding-top: 30px
+  padding-left: 22px
+  padding-right: 22px
+  box-sizing: border-box
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $color_grey
+
+.aboutus-general-detail
+  margin-right: 20px
+  &:last-child
+    margin-right: 0
+
+.aboutus-general-number-txt
+  font-family: $Poppins_Regular
+  font-size: 52px
+  line-height: 100%
+  color: $color_black2
+
+.aboutus-general-symbol
+  font-family: $Poppins_Regular
+  font-size: 52px
+  line-height: 100%
+  color: $color_lightblue
+
+.aboutus-general-number-text
+  margin-top: 9px
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_black2
+
+@media #{$max_1366}
+  .aboutus-general
+    padding-top: 75px
+
+  .aboutus-general-image-info
+    padding-right: 0
+
+  .aboutus-general-info
+    padding-top: 0
+
+  .aboutus-general-title-logotipos
+    flex-wrap: wrap
+
+  .aboutus-general-logotipo
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+
+  .aboutus-general-logotipos
+    flex-direction: row
+    margin-top: 30px
+
+  .aboutus-general-number-txt
+    font-size: 40px
+
+  .aboutus-general-symbol
+    font-size: 40px
+
+  .aboutus-general-logotipos
+    padding-left: 20px
+
+@media #{$max_1024}
+  .aboutus-general-image
+    display: none
+
+  .aboutus-general-info
+    width: 100%
+
+  .aboutus-general-plants1, .aboutus-general-plants2
+    display: none
+
+@media #{$max_767}
+  .aboutus-general-number-text
+    font-size: 16px
+
+  .aboutus-general-logotipos
+    flex-wrap: wrap
+
+@media #{$max_640}
+  .aboutus-general-details
+    flex-wrap: wrap
+
+  .aboutus-general-logotipo
+    width: 100%
+    margin-bottom: 20px
+    margin-right: 0
+    &:last-child
+      margin-bottom: 0
+
+  .aboutus-general-detail
+    width: 100%
+    margin-right: 0
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+
+//Certifications
+.certifications-general
+  position: relative
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat
+  padding-top: 93px
+
+.certifications-general-plants
+  position: absolute
+  bottom: 0
+  right: 0
+
+.certifications-general-plants-img
+  +imgauto
+
+.certifications-general-title
+  .general-title-subtitle
+    margin-top: 3px
+
+.certifications-general-info
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  padding-right: 76px
+  box-sizing: border-box
+
+.certifications-general-info1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 44.79%
+
+.certifications-general-image
+  margin: 0
+  margin-top: 55px
+  font-size: 0
+
+.certifications-general-img
+  +imgauto
+  margin: 0
+
+.certifications-general-info2
+  width: 47.3%
+  padding-bottom: 90px
+
+.certifications-general-item
+  display: flex
+  align-items: center
+  margin-bottom: 65px
+  &:last-child
+    margin-bottom: 0
+
+.certifications-general-item-image
+  margin: 0
+  width: 213px
+
+.certifications-general-item-img
+  +imgauto
+
+.certifications-general-item-info
+  padding-left: 23px
+  box-sizing: border-box
+  width: calc( 100% - 213px )
+
+.certifications-general-item-title-text
+  font-family: $Poppins_Medium
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_black7
+  margin: 0
+
+.certifications-general-item-text
+  margin-top: 5px
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black3
+
+@media #{$max_1450}
+  .certifications-general-info
+    padding-right: 0
+
+  .certifications-general-info1
+    width: 45%
+
+  .certifications-general-info2
+    width: 52%
+
+@media #{$max_1366}
+  .certifications-general-plants
+    display: none
+
+@media #{$max_1024}
+  .certifications-general
+    padding-top: 70px
+
+  .certifications-general-item-info
+    width: calc( 100% - 180px )
+
+  .certifications-general-item-image
+    width: 180px
+
+  .certifications-general-item
+    margin-bottom: 50px
+
+@media #{$max_960}
+  .certifications-general
+    padding-bottom: 70px
+
+  .certifications-general-info
+    flex-wrap: wrap
+
+  .certifications-general-info1
+    width: 100%
+    margin-bottom: 40px
+
+  .certifications-general-image
+    display: none
+
+  .certifications-general-info2
+    width: 100%
+    padding-bottom: 0
+
+  .certifications-general-item
+    margin-bottom: 45px
+
+@media #{$max_767}
+  .certifications-general
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .certifications-general-item
+    margin-bottom: 30px
+
+@media #{$max_480}
+  .certifications-general-item
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+
+  .certifications-general-item-info
+    padding-left: 0
+    width: 100%
+    margin-top: 15px
+
+//Text
+.general-content
+  padding-top: 84px
+  padding-bottom: 84px
+  background-color: $color_lightblue3
+
+.general-content-title
+  margin-bottom: 35px
+  .general-title-subtitle-text
+    display: flex
+    align-items: center
+  ._icon
+    margin-right: 14px
+
+.general-content-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black3
+  column-count: 3
+  column-gap: 30px
+
+@media #{$max_1024}
+  .general-content
+    padding-top: 70px
+    padding-bottom: 70px
+
+  .general-content-text
+    column-count: 2
+
+@media #{$max_767}
+  .general-content
+    padding-top: 51px
+    padding-bottom: 58px
+
+  .general-content-text
+    column-count: 1
+    column-gap: 0
+
+  .general-content-title .general-title-subtitle-text
+    flex-direction: column
+    align-items: flex-start
+
+  .general-content-title ._icon
+    margin-bottom: 20px
+
+//testimonials
+.testimonials-general
+  padding-top: 77px
+  padding-bottom: 97px
+
+.testimonials-general-title
+  text-align: center
+  .general-title-subtitle
+    margin-top: 12px
+
+.testimonials-general-carrousel-in
+  max-width: 920px
+  width: 100%
+  margin: auto
+  text-align: center
+  position: relative
+  margin-top: 20px
+
+.testimonials-general-carrousel-icon
+  display: inline
+
+.testimonials-general-carrousel
+  overflow: hidden
+
+.testimonials-general-carrousel-item
+  width: 100%
+
+.testimonials-general-carrousel-item-text
+  font-family: $Poppins_Regular
+  font-size: 24px
+  line-height: 158.333%
+  color: $color_black2
+
+.testimonials-general-carrousel-item-video
+  margin-top: 27px
+
+.testimonials-general-carrousel-item-video-button
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  ._text
+    font-family: $Poppins_SemiBold
+    font-size: 18px
+    line-height: 122.222%
+    color: $color_black2
+  ._icon
+    margin-left: 10px
+
+.testimonials-general-thumbnails
+  text-align: center
+  max-width: 320px
+  margin: auto
+  margin-top: 30px
+  overflow: hidden
+  .swiper-slide-active
+    .testimonials-general-thumbnails-item-image
+      border: 2px solid $color_blue
+      opacity: 1
+
+.testimonials-general-thumbnails-item-image
+  position: relative
+  padding: 3px
+  box-sizing: border-box
+  border: 2px solid transparent
+  display: inline-block
+  border-radius: 100%
+  font-size: 0
+  mix-blend-mode: luminosity
+  opacity: 0.5
+  cursor: pointer
+
+.testimonials-general-detail
+  text-align: center
+  margin-top: 20px
+  overflow: hidden
+
+.testimonials-general-detail-item
+  margin-top: 30px
+
+.testimonials-general-detail-item-name
+  font-family: $Poppins_Bold
+  font-size: 20px
+  line-height: 120%
+  color: $color_black2
+
+.testimonials-general-detail-item-charge
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 176.9%
+  color: $color_black2
+  margin-top: 6px
+
+.testimonials-general-carrousel-wrap
+  position: relative
+
+.testimonials-general-carrousel-inside
+  position: relative
+  padding: 0 75px
+  box-sizing: border-box
+
+.testimonials-general-carrousel-arrows
+  position: absolute
+  top: 16px
+  left: 0
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  z-index: 2
+  pointer-events: none
+  .general-arrow
+    pointer-events: auto
+
+@media #{$max_1450}
+  .testimonials-general-carrousel-item-text
+    font-size: 22px
+
+@media #{$max_1024}
+  .testimonials-general-carrousel-item-text
+    font-size: 20px
+
+@media #{$max_767}
+  .testimonials-general
+    padding-bottom: 71px
+
+  .testimonials-general-carrousel-inside
+    padding: 0
+
+  .testimonials-general-carrousel-item-text
+    font-size: 18px
+
+  .testimonials-general-carrousel-arrows
+    position: static
+    justify-content: center
+
+  .testimonials-general-detail-item-name
+    font-size: 18px
+
+  .testimonials-general-detail-item-charge
+    font-size: 16px
+
+  .testimonials-general-carrousel-arrows
+    margin-top: 22px
+    .general-arrow
+      margin: 0 7px
+
+  .testimonials-general-carrousel-in
+    margin-top: 9px
+
+//Location
+.location-general
+  background-color: $color_lightblue3
+
+.location-general-title-button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 30px
+
+.location-general-title
+  .general-title-subtitle
+    margin-top: 10px
+
+.location-general-map-img
+  +imgauto
+
+@media #{$max_767}
+  .location-general-title-button
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start

@@ -1,0 +1,229 @@
+.main-slider
+	position: relative
+	height: 800px
+	overflow: hidden
+
+.main-slider-item
+	position: relative
+	overflow: hidden
+
+.main-slider-image-video
+	height: 800px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 100%)
+		z-index: 1
+
+.main-slider-image
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	position: relative
+	+bgcover
+
+.main-slider-image-video
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	width: 100%
+	height: 100%
+	object-fit: cover
+	z-index: 0
+
+.main-slider-container
+	box-sizing: border-box
+	margin: auto
+	height: 800px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	z-index: 10
+
+.main-slider-info
+	text-align: left
+	height: 100%
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+	position: relative
+
+.main-slider-title-text
+	font-family: $Poppins_Medium
+	font-size: 52px
+	line-height: 111.538%
+	color: $color_white
+	margin: 0
+
+.main-slider-button
+	margin-top: 26px
+
+.main-slider-details
+	display: flex
+	align-items: center
+	position: absolute
+	bottom: 28px
+	left: 0
+
+.main-slider-logotipo
+	margin: 0
+	padding-right: 30px
+
+.main-slider-logotipo-img
+	+imgauto
+
+.main-slider-district-address
+	padding-left: 30px
+	border-left: 1px solid rgba(255, 255, 255, 0.50)
+
+.main-slider-district
+	font-family: $Poppins_Regular
+	font-size: 18px
+	line-height: 133.333%
+	color: $color_white
+
+.main-slider-district-icon
+	margin-right: 6px
+
+.main-slider-address
+	margin-top: 3px
+	font-family: $Poppins_Regular
+	font-size: 16px
+	line-height: 150%
+	color: $color_white
+
+.main-slider-pagination-wrap
+	position: absolute
+	bottom: 38px
+	left: 0
+	right: 0
+	margin: auto
+	max-width: 1440px
+	width: 100%
+	padding: 0 30px
+	box-sizing: border-box
+	text-align: right
+	z-index: 10
+
+// animation
+.main-slider-title
+	transform: translateY(-50px)
+	transition: all .5s ease-in-out .4s
+	opacity: 0
+
+.main-slider-button
+	transform: translateY(-50px)
+	transition: all .5s ease-in-out .6s
+	opacity: 0
+
+.main-slider-details
+	transform: translateY(-50px)
+	transition: all .5s ease-in-out .8s
+	opacity: 0
+
+.main-slider-title
+	&.active
+		.main-slider-title
+			transform: translateY(0px)
+			opacity: 1
+		.main-slider-button
+			transform: translateY(0px)
+			opacity: 1
+		.main-slider-details
+			transform: translateY(0px)
+			opacity: 1
+
+.main-slider
+	.swiper-slide
+		&.swiper-slide-active
+			.main-slider-title
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+			.main-slider-button
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+			.main-slider-details
+				transform: translateY(0px)
+				opacity: 1
+				visibility: visible
+
+@media #{$max_1366}
+	.main-slider-title-text
+		font-size: 45px
+
+@media #{$max_1280}
+	.main-slider-title-text
+		font-size: 40px
+
+@media #{$max_1024}
+	.main-slider
+		height: 600px
+
+	.main-slider-item
+		height: 600px
+
+	.main-slider-container
+		height: 600px
+
+	.main-slider-image
+		height: 600px
+
+	.main-slider-title-text
+		font-size: 35px
+
+	.main-slider-logotipo
+		max-width: 125px
+
+@media #{$max_767}
+	.main-slider
+		height: 600px
+
+	.main-slider-item
+		height: 600px
+
+	.main-slider-container
+		height: 600px
+
+	.main-slider-image
+		height: 600px
+
+	.main-slider-title-text
+		font-size: 28px
+		line-height: 121.429%
+
+	.main-slider-button
+		margin-top: 20px
+
+	.main-slider-details
+		position: static
+		padding-top: 60px
+
+	.main-slider-logotipo
+		padding-right: 17px
+		max-width: 90px
+
+	.main-slider-district-address
+		padding-left: 17px
+
+	.main-slider-district
+		font-size: 14px
+
+	.main-slider-address
+		font-size: 12px
+
+	.main-slider-pagination-wrap
+		text-align: center
+		bottom: 30px

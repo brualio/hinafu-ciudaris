@@ -1,0 +1,59 @@
+.block-slider
+	position: relative
+
+.block-slider-in
+	overflow: hidden
+	padding: 40px 60px
+	box-sizing: border-box
+	position: relative
+	margin-bottom: 50px
+	img
+		width: 100%
+		height: auto
+	&:before, &:after
+		content: ""
+		width: 100%
+		position: absolute
+		top: 0
+		height: 100%
+		background: $color_white
+		z-index: 2
+		pointer-events: none
+	&:before
+		right: 96%
+	&:after
+		left: 96%
+
+//Arrows
+.block-slider-arrows
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	max-width: 100%
+	margin: auto
+	pointer-events: none
+	z-index: 3
+	font-size: 0
+	display: flex
+	justify-content: space-between
+
+//Dots
+.block-slider
+	.swiper-pagination-bullets
+		text-align: center
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		z-index: 10
+	.swiper-pagination-bullet
+		width: 10px
+		height: 10px
+		background: red
+		opacity: 1
+	.swiper-pagination-bullet-active
+		background: green

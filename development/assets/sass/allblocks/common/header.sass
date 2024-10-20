@@ -1,0 +1,546 @@
+// WP admin bar styles
+.---admin-bar
+	.main-header-block
+		top: 32px
+
+@media #{$max_782}
+	.---admin-bar
+		.main-header-block
+			top: 46px
+
+@media #{$max_600}
+	.---admin-bar
+		.main-header.---scrolling
+			.main-header-block
+				top: 0 !important
+
+//content
+.content-page
+	overflow: hidden
+
+//general
+.main-header
+	position: relative
+	overflow: hidden
+	height: 110px
+	transition: $transition
+
+.main-header-block
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 110px
+	z-index: 800
+	transition: $transition
+	background: $color_white
+	box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.07)
+
+.main-header-container
+	height: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.main-header-logo
+	width: 150px
+	margin: 0
+	display: block
+	position: relative
+
+.main-header-logo-img
+	+imgauto
+	transition: $transition
+	&.--white
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		+hide
+
+.main-header-content
+	box-sizing: border-box
+	height: 100%
+
+.main-header-nav
+	height: 100%
+
+.main-header-list
+	height: 100%
+	display: flex
+	justify-content: space-between
+	margin: 0
+	box-sizing: border-box
+	> li
+		display: flex
+		align-items: center
+		margin-right: 28.5px
+		position: relative
+		overflow: hidden
+		&:last-child
+			margin-right: 0
+	> li > a
+		display: inline-block
+		vertical-align: middle
+		box-sizing: border-box
+		color: $color_darkblue
+		font-family: $Poppins_Medium
+		font-size: 16px
+		position: relative
+		z-index: 2
+	> li.menu--quote > a
+		padding: 10px 25px
+		border-radius: 10px
+		background-color: $color_blue
+		color: $color_white
+		&:hover
+			color: $color_white
+	> li > a:hover
+		color: $color_darkblue
+	//current page item
+	> li.current_page_item > a
+		font-family: $Poppins_Medium
+	> li.active > a
+		font-family: $Poppins_Medium
+
+.main-header-content
+	display: flex
+	align-items: center
+
+// burguer
+.main-header-burguer
+	margin-left: 26.5px
+	position: relative
+	cursor: pointer
+	.header-burguer--1, .header-burguer--2
+		transition: $transition
+	.header-burguer--2
+		position: absolute
+		top: 0
+		left: 0
+		+hide
+
+//
+.page-template-theme-home, .category-inversionistas
+	.main-header
+		height: auto
+	.main-header-block
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)
+		box-shadow: none
+	.main-header-list>li>a
+		color: $color_white
+	.main-header-logo-img
+		&.--color
+			+hide
+		&.--white
+			+show
+	.main-header-list>li.menu--quote>a
+		background-color: $color_blue
+	.header-burguer--2
+		+show
+
+@media #{$min_768}
+	.single-proyecto
+		.main-header
+			height: auto
+		.main-header-block
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)
+			box-shadow: none
+		.main-header-list>li>a
+			color: $color_white
+		.main-header-logo-img
+			&.--color
+				+hide
+			&.--white
+				+show
+		.main-header-list>li.menu--quote>a
+			background-color: $color_blue
+		.header-burguer--2
+			+show
+
+// scrolling
+.main-header.---scrolling
+	.main-header-block
+		height: 110px
+		background: $color_white
+		box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.07)
+	.main-header-logo-img
+		&.--color
+			+show
+		&.--white
+			+hide
+	.main-header-list>li>a
+		color: $color_darkblue
+	.main-header-list>li.menu--quote>a
+		color: $color_white
+	.header-burguer--1
+		+show
+	.header-burguer--2
+		+hide
+
+// sidebar
+.main-sidebar
+	position: fixed
+	top: -100%
+	right: 0
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	background: $color_darkblue2
+	z-index: 1100
+	left: 0
+	box-sizing: border-box
+	transition: $transition
+	padding: 46px 83px 15px 76px
+	box-sizing: border-box
+	&.---show
+		top: 0
+
+.main-sidebar-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,0.6)
+	z-index: 850
+	pointer-events: none
+	+hide
+	transition: $transition
+	&.---show
+		+show
+		pointer-events: auto
+
+.main-sidebar-burguer
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 45px
+	width: 45px
+	border: 1px solid $color_white
+	border-radius: 100%
+	position: absolute
+	top: 17px
+	right: 19px
+
+.main-sidebar-nav-events
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding-bottom: 67.5px
+
+.main-sidebar-nav
+	margin: 0
+	padding-top: 23px
+
+.main-sidebar-list-top
+	display: flex
+	> li:last-child > a
+		&::before
+			content: "/"
+			display: inline-block
+			margin: 0 5px
+
+.main-sidebar-list
+	> li.current_page_item > a
+		color: $color_white
+	> li.active > a
+		color: $color_white
+	> li
+		margin-bottom: 16px
+	> li > a
+		font-size: 24px
+		line-height: 125%
+		font-family: $Poppins_Medium
+		color: $color_white
+		position: relative
+		display: inline-block
+	> li.menu--service > a
+		&:after
+			content: ""
+			display: inline-block
+			width: 12px
+			height: 10px
+			background-image: url('../images/arrow-1.svg')
+			+bgcontain
+			margin-left: 10px
+			transition: $transition
+	> li.menu--service > a.---active
+		&:after
+			transform: rotate(180deg)
+	> li.menu--service > .sub-menu > li
+		margin-bottom: 5px
+		&:first-child
+			padding-top: 12px
+		&:last-child
+			margin-bottom: 0
+	> li.menu--service > .sub-menu > li > a
+		color: $color_grey2
+		font-family: $Poppins_Regular
+		font-size: 16px
+	> li.menu--workwithus
+		padding-top: 2px
+	> li.menu--workwithus > a
+		font-size: 18px
+		font-family: $Poppins_Regular
+		color: $color_lightblue
+	> li.menu-quote--sidebar
+		display: none
+		margin-top: 25px
+	> li.menu-quote--sidebar > a
+		border-radius: 10px
+		padding: 11px 25px
+		background-color: $color_lightblue
+		color: $color_white
+		font-size: 16px
+
+.main-sidebar-events
+	width: 450px
+
+.main-sidebar-events-image
+	border-radius: 10px
+	overflow: hidden
+	width: 100%
+	display: block
+
+.main-sidebar-events-img
+	+imgfull
+
+.main-sidebar-promo
+	position: absolute
+	top: 90px
+	right: 33px
+
+.main-sidebar-promo-icon
+	display: flex
+	justify-content: center
+	margin-bottom: 13px
+
+.main-sidebar-promo-text
+	font-family: $Poppins_Medium
+	color: $color_white
+	text-transform: uppercase
+	font-size: 14px
+	line-height: 142.857%
+	letter-spacing: 2px
+	writing-mode: vertical-rl
+
+.main-sidebar-details-social
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.main-sidebar-details-items
+	display: flex
+	align-items: center
+
+.main-sidebar-details-social
+	padding-top: 27.5px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: rgba(255, 255, 255, 0.15)
+
+.main-sidebar-details-item
+	display: flex
+	align-items: center
+	margin: 0
+	margin-right: 60px
+	&:last-child
+		margin-right: 0
+
+.main-sidebar-details-item-icon
+	display: block
+	margin-right: 10px
+	color: $color_white
+	font-size: 18px
+
+.main-sidebar-details-item-text
+	font-family: $Poppins_Regular
+	font-size: 16px
+	line-height: 150%
+	color: $color_white
+
+.main-sidebar-social
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 12px
+		&:last-child
+			margin-right: 0
+	> ul > li.--linkedin2 > a
+		font-size: 33px
+	> ul > li > a
+		width: 48px
+		height: 48px
+		font-size: 28px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $color_white
+
+// mediaqueries
+@media #{$max_1024}
+	//general
+	.main-header
+		height: 90px
+
+	.main-header-block
+		height: 90px
+
+	.main-header-nav
+		display: none
+
+	.main-header-logo
+		width: 120px
+
+	.main-header-burguer
+		margin-left: 0
+
+	.main-sidebar
+		padding: 46px 65px 15px 40px
+
+	.main-sidebar-nav
+		width: 50%
+
+	.main-sidebar-events
+		width: 47%
+
+	.main-sidebar-list>li>a
+		font-size: 20px
+
+	.main-sidebar-list>li.menu--service>.sub-menu>li>a
+		font-size: 15px
+
+	.main-sidebar-list>li.menu-quote--sidebar
+		display: block
+
+	.main-sidebar-burguer
+		right: 10px
+
+	.main-sidebar-promo
+		right: 25px
+
+	.main-sidebar-details-item
+		margin-right: 50px
+
+	.main-sidebar-social>ul>li
+		margin-right: 11px
+
+	.main-sidebar-social>ul>li>a
+		width: 45px
+		height: 45px
+		font-size: 24px
+
+	.main-sidebar-social>ul>li.--linkedin2>a
+		font-size: 28px
+
+	//scroll
+	.main-header.---scrolling
+		.main-header-block
+			height: 90px
+
+	//burguer
+	.main-header-burguer
+		&.main-burguer
+			display: block
+
+@media #{$max_960}
+	.main-sidebar-events
+		display: none
+
+	.main-sidebar-promo
+		display: none
+
+	.main-sidebar-nav
+		width: 100%
+
+	.main-sidebar-details
+		display: none
+
+@media #{$max_767}
+	//general
+	.main-header
+		height: 80px
+
+	.main-header-block
+		height: 80px
+
+	.main-header-logo
+		width: 105px
+
+	.main-sidebar-list>li
+		margin-bottom: 12px
+
+	.main-sidebar-list>li>a
+		font-family: $Poppins_Regular
+		font-size: 18px
+		line-height: 133.333%
+
+	.main-sidebar-list>li.menu--workwithus>a
+		font-size: 16px
+
+	.main-sidebar
+		padding: 73px 25px 24.5px 35px
+
+	.main-sidebar-nav-events
+		padding-bottom: 47px
+
+	.main-sidebar-social>ul>li
+		margin-right: 10px
+
+	.main-sidebar-social>ul>li>a
+		width: 41px
+		height: 41px
+		font-size: 23px
+
+	.main-sidebar-social>ul>li.--linkedin2>a
+		font-size: 27px
+
+	.main-sidebar-list>li.menu--service>.sub-menu>li>a
+		font-size: 14px
+
+	.main-sidebar-burguer
+		top: 14px
+		right: 12px
+
+	//scroll
+	.main-header.---scrolling
+		.main-header-block
+			height: 80px
+
+//Whatsapp
+.whatsapp-fixed
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 60px
+	height: 60px
+	position: fixed
+	right: 12px
+	bottom: 35px
+	z-index: 5
+	border-radius: 100%
+	background-color: $color_green
+	color: $color_white
+
+.whatsapp-fixed-icon
+	width: 100%
+	height: 100%
+	position: relative
+	z-index: 2
+
+.whatsapp-fixed-icon-image
+	+imgauto
+
+@media #{$max_767}
+	.whatsapp-fixed
+		width: 50px
+		height: 50px

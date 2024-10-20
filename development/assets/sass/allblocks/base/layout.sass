@@ -1,0 +1,107 @@
+// container
+.main-wrapper-container
+	width: 100%
+	margin: 0 auto
+	position: relative
+	padding: 0
+	box-sizing: border-box
+
+//Wrapper
+@media #{$min_1921_max_2600}
+	.main-wrapper-container
+		&.--default
+			padding: 0 30px
+			max-width: 1440px
+		&.--default2
+			padding: 0 30px
+			max-width: 1460px
+		&.--full
+			padding: 0 30px
+
+@media #{$min_1600_max_1920}
+	.main-wrapper-container
+		&.--default
+			padding: 0 30px
+			max-width: 1440px
+		&.--default2
+			padding: 0 30px
+			max-width: 1460px
+		&.--full
+			padding: 0 30px
+
+@media #{$min_1200_max_1599}
+	.main-wrapper-container
+		&.--default
+			padding: 0 30px
+			max-width: 1440px
+		&.--default2
+			padding: 0 30px
+			max-width: 1460px
+		&.--full
+			padding: 0 30px
+
+@media #{$min_1025_max_1199}
+	.main-wrapper-container
+		&.--default
+			padding: 0 30px
+			max-width: 1260px
+		&.--default2
+			padding: 0 30px
+			max-width: 1260px
+		&.--full
+			padding: 0 30px
+
+@media #{$min_768_max_1024}
+	.main-wrapper-container
+		&.--default
+			padding: 0 18px
+			max-width: 1260px
+		&.--default2
+			padding: 0 18px
+			max-width: 1260px
+		&.--full
+			padding: 0 18px
+
+@media #{$min_320_max_767}
+	.main-wrapper-container
+		&.--default
+			padding: 0 18px
+			max-width: 1260px
+		&.--default2
+			padding: 0 18px
+			max-width: 1260px
+		&.--full
+			padding: 0 18px
+
+// padding
+.main-wrapper-padding
+	width: 100%
+	padding: 0
+	box-sizing: border-box
+
+@media #{$min_1025_max_2600}
+	.main-wrapper-padding
+		&.--all
+			padding: 65px 0
+		&.--top
+			padding: 65px 0 0 0
+		&.--bottom
+			padding: 0 0 65px 0
+
+@media #{$min_768_max_1024}
+	.main-wrapper-padding
+		&.--all
+			padding: 55px 0
+		&.--top
+			padding: 55px 0 0 0
+		&.--bottom
+			padding: 0 0 55px 0
+
+@media #{$min_320_max_767}
+	.main-wrapper-padding
+		&.--all
+			padding: 45px 0
+		&.--top
+			padding: 45px 0 0 0
+		&.--bottom
+			padding: 0 0 45px 0

@@ -1,0 +1,115 @@
+// PAGENAVI
+.pagination-block__wp
+	.pagination-links
+		padding: 0
+		margin: 0
+		list-style: none
+		display: flex
+		align-items: center
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+		display: flex
+		align-items: center
+	.wp-pagenavi
+		display: flex
+		align-items: center
+	li
+		padding: 0
+		margin: 0 
+		list-style: none
+		.pages
+			display: none !important
+		.last
+			display: none !important
+		.first
+			display: none !important
+		.extend
+			display: none !important
+	a:not(.previouspostslink):not(.nextpostslink), span:not(.previouspostslink):not(.nextpostslink)
+		display: block
+		width: 40px
+		line-height: 40px
+		height: 40px
+		text-align: center
+		border-radius: 100%
+		font-size: 15px
+		border: 2px solid black
+		color: black
+		background: transparent
+		margin: 0 6px
+		transition: all .25s ease-in-out
+		cursor: pointer
+		&:hover
+			background: black
+		&.current
+			background: black
+	a, span
+		display: block
+		width: 40px
+		line-height: 40px
+		height: 40px
+		text-align: center
+		border-radius: 100%
+		font-size: 25px
+		border: 2px solid black
+		color: black
+		background: transparent
+		margin: 0 6px
+		transition: all .25s ease-in-out
+		cursor: pointer
+		&.prev
+			font-size: 0 !important
+			&:before
+				content: "\e909"
+				font-family: 'icomoon'
+				font-size: 13px
+		&.next
+			font-size: 0 !important
+			&:before
+				content: "\e90b"
+				font-family: 'icomoon'
+				font-size: 13px
+		&.previouspostslink
+			font-size: 0
+			&:before
+				content: "\e909"
+				font-family: 'icomoon'
+				font-size: 13px
+		&.nextpostslink
+			font-size: 0
+			&:before
+				content: "\e90b"
+				font-family: 'icomoon'
+				font-size: 13px
+		&:hover
+			background: black
+
+@media #{$tablet1024}
+	.pagination-block__wp
+		a:not(.previouspostslink):not(.nextpostslink), span:not(.previouspostslink):not(.nextpostslink)
+			width: 35px
+			height: 35px
+			line-height: 35px
+			font-size: 14px
+		a, span
+			width: 35px
+			height: 35px
+			line-height: 35px
+			font-size: 14px
+
+@media #{$mobile767}
+	.pagination-block__wp 
+		a:not(.previouspostslink):not(.nextpostslink), span:not(.previouspostslink):not(.nextpostslink)
+			width: 30px
+			height: 30px
+			line-height: 30px
+			font-size: 13px
+		a, span
+			width: 30px
+			height: 30px
+			line-height: 30px
+			font-size: 13px
+
+

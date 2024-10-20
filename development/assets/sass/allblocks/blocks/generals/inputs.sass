@@ -1,0 +1,790 @@
+//general
+.general-input
+	text-align: left
+	position: relative
+
+.general-input-field
+	width: 100%
+	height: 55px
+	line-height: 55px
+	box-sizing: border-box
+	border: none
+	margin: 0
+	padding: 0
+	border-radius: 0
+	background: none
+	border-radius: 10px
+	border: 1px solid $color_blue4
+	font-family: $Poppins_Regular
+	font-size: 16px
+	color: $color_black2
+	padding-left: 14px
+	padding-right: 14px
+	box-sizing: border-box
+	&::placeholder
+		color: $color_black2
+
+// Textarea
+.--textarea
+	.general-input-field
+		height: 110px
+		line-height: 1.1
+		padding-top: 12px
+	&.textarea--type2
+		.general-input-field
+			height: 75px
+
+// Select
+.--select--default
+	position: relative
+	.general-input-field
+		position: relative
+
+.--select
+	.general-input-field
+		padding-right: 35px
+		appearance: none
+		cursor: pointer
+		&::-ms-expand
+			display: none
+	.general-input-ico
+		font-size: 11px
+		right: 25px
+		display: block
+		color: black
+	&.select--type2
+		.general-input-field
+			border: none
+			border-radius: 0
+			border-bottom: 1px solid $color_blue4
+			text-transform: uppercase
+			font-family: $Poppins_Medium
+			font-size: 14px
+			letter-spacing: 2px
+			color: $color_black
+			height: 45px
+			line-height: 45px
+			padding-left: 0
+		.general-input-ico
+			line-height: 45px
+
+.--field-on
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 15
+	width: 100px
+
+.--field-in
+	padding-left: 120px
+
+// white
+.general-input--white
+	&.general-input
+		.general-input-field
+			border: 1px solid white
+			color: white
+			background: white
+	.general-input-title
+		color: white
+	.general-input-ico
+		color: white
+
+//Type 1
+.general-input--type1
+	.general-input-title
+		font-family: $Poppins_Regular
+		font-size: 14px
+		color: $color_white2
+	.general-input-field
+		color: $color_white
+		background-color: rgba(255, 255, 255, 0.10)
+	&.--select
+		.general-input-ico
+			path
+				stroke: $color_white
+		option
+			color: $color_blue
+	.wpcf7-not-valid-tip
+		color: $color_white2 !important
+
+//Type 2
+.general-input--type2
+	.general-input-title
+		font-family: $Poppins_Regular
+		font-size: 14px
+		color: $color_black2
+
+// titulo inline 
+.general-input--inline
+	display: flex
+	align-items: center
+	.general-input-title
+		margin: 0
+		margin-right: 15px
+	.general-input-inside
+		width: 100%
+
+//efecto
+.input--animation
+	&.---focus
+		.general-input-title.--title-animate
+			top: 8px
+			font-size: 12px
+		.general-input-field
+			padding-top: 15px
+		&.--textarea .general-input-field
+			padding-top: 27px
+		&.--select .general-input-field
+			padding-top: 7px
+
+// with title
+.general-input-title
+	margin: 0
+	display: block
+	cursor: auto
+	transition: $transition
+	&.--title-animate
+		position: absolute
+		top: 16px
+		left: 14px
+
+// inside input
+.general-input-inside
+	position: relative
+
+// with icon
+.general-input-ico
+	display: block
+	pointer-events: none
+	background: none
+	border: none
+	appearance: none
+	padding: 0
+	margin: 0
+	z-index: 2
+	position: absolute
+	top: 0
+	color: black
+	font-size: 17px
+	line-height: 55px
+	&.--left
+		left: 15px
+	&.--right
+		right: 15px
+	&.--p-none
+		pointer-events: none
+	&.--p-auto
+		pointer-events: auto
+
+.--left
+	.general-input-field
+		padding-left: 40px
+
+.--right
+	.general-input-field
+		padding-right: 40px
+
+.--all
+	.general-input-field
+		padding-right: 40px
+		padding-left: 40px
+
+// icon with button
+.--input-button
+	.general-input-ico
+		pointer-events: auto
+
+// Radiobutton and Checkbox
+.general-input-checkbox-radio
+	input[type="checkbox"], input[type="radio"]
+		display: none
+
+.general-input-checkbox-radio-label-container
+	display: flex
+	align-items: center
+
+.general-input-checkbox-radio-fig
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+
+.general-input-checkbox-radio-text
+	padding-left: 12px
+	box-sizing: border-box
+	font-family: $Poppins_Regular
+	color: $color_black
+	line-height: 1.1
+	font-size: 16px
+	> a
+		color: $color_black
+		text-decoration: underline
+
+// Radio
+.general-input-radio
+	.general-input-checkbox-radio-fig
+		width: 18px
+		height: 18px
+		&:before
+			width: 100%
+			height: 100%
+			border-radius: 100%
+			border: 1px solid $color_blue3
+			box-sizing: border-box
+		&:after
+			content: ""
+			top: 5px
+			left: 5px
+			width: 8px
+			height: 8px
+			border-radius: 100%
+			background: $color_blue3
+			text-align: center
+			margin: auto
+			+hide
+	input[type="radio"]:checked + .general-input-checkbox-radio-label
+		.general-input-checkbox-radio-fig
+			&:after
+				+show
+
+// Checkbox
+.general-input-checkbox
+	.general-input-checkbox-radio-fig
+		width: 15px
+		height: 15px
+		&:before
+			width: 100%
+			height: 100%
+			border-radius: 2px
+			border: 1px solid black
+			box-sizing: border-box
+		&:after
+			content: "\ea10"
+			font-family: 'icomoon'
+			top: 3px
+			right: 0
+			text-align: center
+			margin: auto
+			font-size: 7px
+			color: white
+			+hide
+	input[type="checkbox"]:checked + .general-input-checkbox-radio-label
+		.general-input-checkbox-radio-text
+			color: black
+		.general-input-checkbox-radio-fig
+			&:after
+				+show
+			&:before
+				border: 1px solid black
+				background: black
+
+//checkbox WPCF7
+.general-input-checkbox-wp
+	.wpcf7-list-item
+		margin: 0
+	&.--type1
+		label
+			>	span
+				color: $color_white
+				&:after
+					color: $color_blue3
+				&::before
+					border: 1px solid $color_white
+			input[type="checkbox"]:checked +
+				span:before
+					background: $color_white
+					border: 1px solid $color_white
+	label
+		padding-left: 0
+		> input
+			position: absolute
+			left: 0
+			top: 0
+			opacity: 0
+			visibility: hidden
+		> span
+			position: relative
+			padding-left: 26px
+			font-size: 16px
+			font-family: $Poppins_Regular
+			color: $color_black2
+			line-height: 1.2
+			display: inline-block
+			&:after
+				content: "\ea10"
+				font-family: 'icomoon'
+				position: absolute
+				left: 4px
+				top: 50%
+				transform: translateY(-50%)
+				color: $color_white
+				font-size: 9px
+				+hide
+			&:before
+				content: ''
+				position: absolute
+				width: 16px
+				height: 16px
+				border-radius: 1px
+				border: 1px solid $color_blue3
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				box-sizing: border-box
+			> a
+				font-family: $Poppins_SemiBold
+				text-decoration: underline
+				color: $color_lightblue
+		input[type="checkbox"]:checked +
+			span:after
+				+show
+			span:before
+				background: $color_blue3
+				border: 1px solid $color_blue3
+
+// input file
+.general-input-file
+	position: relative
+	width: 100%
+	input[type="file"]
+		display: none
+
+.file--type2
+	.general-input-file-label
+		border-radius: 10px
+		padding: 0 20px
+	.general-input-file-ico
+		font-size: 14px
+		color: $color_black2
+	.general-input-file-text
+		font-size: 12px
+	.general-input-file-ico svg
+		width: 21px
+		margin-right: 5px
+
+.general-input-file-label
+	display: block
+	position: relative
+	box-sizing: border-box
+	border: none
+	background: none
+	border-radius: 0
+	appearance: none
+	padding: 0
+	margin: 0
+	margin-bottom: 0
+	width: 100%
+	border: 1px dashed $color_blue
+	background-color: $color_lightblue5
+	padding: 0 30px
+	border-radius: 30px
+	height: 55px
+	overflow: hidden
+	text-align: center
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.general-input-file-text
+	display: block
+	margin: 0
+	color: $color_black
+	font-family: $Poppins_Regular
+	font-size: 16px
+	line-height: 55px
+	text-align: left
+
+.general-input-file-ico
+	display: block
+	margin: 0
+	pointer-events: none
+	z-index: 2
+	box-sizing: border-box
+	color: $color_blue
+	font-family: $Poppins_Regular
+	font-size: 16px
+	line-height: 55px
+	display: flex
+	align-items: center
+	svg
+		margin-right: 12px
+
+.general-input-file
+	display: flex
+	flex-direction: column-reverse
+	justify-content: flex-end
+
+.general-input-disclaimer
+	display: block
+	font-family: $Poppins_Regular
+	color: $color_black
+	font-size: 12px
+	line-height: 150%
+	margin-top: 5px
+
+// form
+.form-block
+	text-align: left
+	form
+		width: 100%
+		margin: 0
+		padding: 0
+
+.form-block-text-inputs
+	font-size: 16px
+	line-height: 150%
+	font-family: $Poppins_Regular
+	margin-bottom: 30px
+	strong
+		font-family: $Poppins_SemiBold
+	p
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+
+.form-block-subtitle
+	margin-bottom: 14px
+
+.form-block-subtitle-text
+	font-family: $Poppins_Medium
+	font-size: 14px
+	letter-spacing: 2px
+	line-height: 142.857%
+	color: $color_blue3
+	text-transform: uppercase
+	margin: 0
+
+.form-block-title
+	margin-bottom: 26px
+
+.form-block-title-text
+	font-family: $Poppins_Medium
+	color: $color_blue3
+	font-size: 24px
+	line-height: 125%
+	margin: 0
+
+.form-block-line
+	width: 100%
+	height: 1px
+	background-color: $color_lightblue
+	opacity: 0.5
+	margin: 40px 0
+
+.form-block-radios
+	display: flex
+	margin-bottom: 30px
+	.general-input-checkbox-radio
+		margin-right: 70px
+		&:last-child
+			margin-right: 0
+	.general-input-checkbox-radio-text
+		white-space: nowrap
+	.wpcf7-list-item
+		margin: 0
+		margin-right: 77px
+		&:last-child
+			margin-right: 0
+	input[type="checkbox"], input[type="radio"]
+		display: none
+	.wpcf7-list-item-label
+		text-indent: 12px
+		box-sizing: border-box
+		font-family: $Poppins_Regular
+		color: $color_black
+		line-height: 1.1
+		font-size: 16px
+		display: flex
+		position: relative
+		&:before
+			display: block
+			width: 18px
+			height: 18px
+			border-radius: 100%
+			border: 1px solid $color_blue3
+			box-sizing: border-box
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			top: 5px
+			left: 5px
+			width: 8px
+			height: 8px
+			border-radius: 100%
+			background: $color_blue3
+			text-align: center
+			margin: auto
+			+hide
+	input[type="radio"]:checked + .wpcf7-list-item-label
+		&:after
+			+show
+
+.form-block-checkboxRadio
+	margin-top: 30px
+
+.form-block-pie
+	font-family: $Poppins_Regular
+	font-size: 14px
+	line-height: 128.571%
+	color: $color_black2
+	margin-top: 0
+	text-align: left
+	p
+		margin: 0
+	&.--type1
+		color: $color_grey
+
+.form-block-button
+	margin-top: 24px
+
+.general-input-lines
+	padding: 0
+	margin: 0
+
+.general-input-line
+	display: flex
+	flex-wrap: wrap
+	.general-input
+		width: 100%
+		margin-bottom: 15px
+	&.--two
+		.general-input
+			width: 49%
+			display: inline-block
+			margin-right: 2%
+			&:last-child
+				margin-right: 0
+
+	&.--three
+		.general-input
+			width: 32%
+			display: inline-block
+			margin-right: 2%
+			&:last-child
+				margin-right: 0
+
+	&.--four
+		.general-input
+			width: 23.5%
+			display: inline-block
+			margin-right: 2%
+			&:last-child
+				margin-right: 0
+
+@media #{$max_1024}
+	.form-block-title-text
+		font-size: 22px
+
+@media #{$max_960}
+	.general-input-line
+		&.--four
+			.general-input
+				width: 49%
+				display: inline-block
+				margin-right: 2%
+				&:nth-child(2n+2)
+					margin-right: 0
+
+@media #{$max_767}
+	.general-input-line
+		&.--four
+			.general-input
+				width: 100%
+				display: inline-block
+				margin-right: 0
+
+		&.--two
+			.general-input
+				width: 100%
+				display: inline-block
+				margin-right: 0
+
+		&.--three
+			.general-input
+				width: 100%
+				display: inline-block
+				margin-right: 0
+
+	.general-input-file-ico
+		line-height: 35px
+		font-size: 14px
+
+	.form-block-title-text
+		font-size: 20px
+
+	.form-block-radios .wpcf7-list-item
+		margin-right: 50px
+
+	.general-input-file-label
+		padding: 5px 20px
+		display: block
+		height: auto
+		line-height: inherit
+
+	.general-input-file-ico
+		justify-content: center
+
+	.general-input-file-text
+		height: auto
+		line-height: inherit
+		text-align: center
+
+.select-custom
+	position: relative
+	z-index: 50
+
+.select-custom-selected
+	position: relative
+	cursor: pointer
+
+.select-custom-selected-option
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-radius: 10px
+	border: 1px solid rgba(0, 0, 0, 0.3)
+	min-height: 50px
+	display: flex
+	align-items: center
+	padding: 10px 18px
+	box-sizing: border-box
+	&.--white
+		border: 1px solid rgba(255,255,255,0.3)
+	&.--black
+		.select-custom-selected-option-text
+			font-family: 'Arial'
+			font-size: 17px
+			color: Black
+	&.--blue
+		border-radius: 6px
+		background-color: blue
+		border: none
+		justify-content: center
+		.select-custom-selected-option-text
+			font-family: 'Arial'
+			font-size: 16px
+			color: White
+			letter-spacing: 1px
+
+.select-custom-selected-option-text
+	cursor: pointer
+	padding-right: 10px
+	box-sizing: border-box
+
+.select-custom-selected-option-icon-arrow
+	display: flex
+
+.select-custom-options
+	background-color: White
+	border-radius: 0 0 10px 10px
+	overflow: hidden
+	position: absolute
+	top: 101%
+	left: 0
+	width: 100%
+	z-index: 2
+	transform: translateY(-5px)
+	+hide
+	transition: $transition
+	box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.5)
+	&.---show
+		+show
+		transform: translateY(-1px)
+	&.--blue
+		.select-custom-option
+			background-color: blue
+		.select-custom-option-content-text
+			display: flex
+			align-items: center
+			justify-content: center
+			font-family: 'Arial'
+			font-size: 16px
+			color: White
+			letter-spacing: 1px
+
+.select-custom-option
+	font-size: 17px
+	font-family: 'Arial'
+	padding: 11px 17px
+	box-sizing: border-box
+	color: blue
+	text-align: center
+	cursor: pointer
+	&.---active
+		background-color: red
+
+@media #{$max_960}
+	.select-custom
+		max-width: 480px
+		width: 100%
+		margin: auto
+
+@media #{$max_767}
+	.select-custom-selected-option.--black .select-custom-selected-option-text
+		font-size: 16px
+
+	.select-custom-option
+		font-size: 16px
+
+.wpcf7-form-control-wrap
+	margin: 0
+
+.wpcf7-not-valid-tip
+	margin-top: 5px
+	font-family: $Poppins_Regular
+	font-size: 14px !important
+	line-height: 137.5%
+	padding: 0
+	box-sizing: border-box
+	color: $color_red !important
+
+.wpcf7-spinner
+	width: 20px !important
+	height: 20px !important
+	position: absolute !important
+	top: 50% !important
+	transform: translateY(-50%) !important
+	right: 10px !important
+	background-color: $color_white !important
+	z-index: 3 !important
+	margin: 0 !important
+
+.wpcf7-spinner::before
+	width: 6px !important
+	height: 6px !important
+	transform-origin: 6px 6px !important
+	background-color: $color_lightblue !important
+
+.wpcf7 form.sent .wpcf7-response-output
+	display: none !important
+
+.wpcf7 form .wpcf7-response-output
+	display: none !important
+
+.wpcf7 form .wpcf7-response-output
+	display: none !important
+
+@media #{$max_1024}
+	.wpcf7-not-valid-tip
+		font-size: 14px !important
+		margin-top: 7px
+
+.wpcf7 form .wpcf7-response-output
+	margin: 20px 0 0 0 !important
+	font-family: $Poppins_Regular !important
+	color: $color_red !important
+	font-size: 14px !important
+	border: 1px solid $color_red !important
+
+@media #{$max_767}
+	.wpcf7 form .wpcf7-response-output
+		font-size: 14px !important

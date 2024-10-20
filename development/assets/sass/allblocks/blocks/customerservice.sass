@@ -1,0 +1,314 @@
+//Banner
+.service-banner
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: calc( 100% - 38px )
+    background-color: $color_lightblue3
+    z-index: 1
+    border-radius: 10px
+
+.service-banner-content
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  padding: 0 69px 0 41px
+  position: relative
+  z-index: 2
+
+.service-banner-title
+  display: flex
+  align-items: center
+  padding-top: 38px
+  padding-right: 30px
+  box-sizing: border-box
+  .general-title-subtitle
+    margin-top: 12px
+
+.service-banner-image
+  margin: 0
+  display: flex
+  align-items: flex-end
+
+.service-banner-img
+  +imgauto
+  margin: 0
+
+@media #{$max_960}
+  .service-page-banner
+    padding-top: 50px
+
+  .service-banner::before
+    height: 100%
+
+  .service-banner-content
+    padding: 50px 25px
+
+  .service-banner-title
+    padding-top: 0
+    padding-right: 0
+    width: 100%
+
+  .service-banner-image
+    display: none
+
+//Menu - content
+.service-page-menu-content
+  padding-top: 70px
+  padding-bottom: 100px
+
+.service-page-menu-content-block
+  display: flex
+  align-items: flex-start
+
+.service-page-menu
+  width: 340px
+
+.service-menu-nav
+  margin: 0
+
+.service-menu-list
+  > li
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  > li > a
+    font-family: $Poppins_SemiBold
+    font-size: 14px
+    line-height: 142.857%
+    color: $color_black3
+    letter-spacing: 2px
+    text-transform: uppercase
+    padding: 25px 50px 25px 25px
+    display: block
+    box-sizing: border-box
+    border-radius: 8px
+    background-color: $color_lightblue3
+    position: relative
+    transition: $transition
+    &::after
+      content: "\e914"
+      font-family: 'icomoon'
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 25px
+      font-size: 22px
+      color: $color_white
+      transition: $transition
+      +hide
+    &:hover
+      background-color: $color_blue8
+      color: $color_white
+      &:after
+        +show
+  > li.current-menu-item > a
+    background-color: $color_blue8
+    color: $color_white
+    &:after
+      +show
+
+.service-page-content
+  width: calc(100% - 340px)
+  padding-left: 80px
+  box-sizing: border-box
+
+@media #{$max_1024}
+  .service-page-menu-content
+    padding-bottom: 75px
+
+  .service-page-menu
+    width: 300px
+
+  .service-page-content
+    width: calc(100% - 300px)
+    padding-left: 50px
+
+@media #{$max_960}
+  .service-page-menu-content-block
+    flex-wrap: wrap
+
+  .service-page-menu
+    width: 100%
+
+  .service-page-content
+    width: 100%
+    padding-left: 0
+    padding-top: 50px
+
+@media #{$max_767}
+  .service-page-menu-content
+    padding-top: 65px
+    padding-bottom: 65px
+
+//consult
+.service-page-consult-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  strong
+    font-weight: normal
+    font-family: $Poppins_Medium
+  p:last-child
+    margin-bottom: 0
+
+.service-page-consult-form-details
+  display: flex
+  justify-content: space-between
+  margin-top: 40px
+
+.service-page-consult-form
+  width: 65.715%
+  .form-block-checkbox
+    margin-top: 6px
+  .form-block-button
+    .general-button
+      min-width: 130px
+    .general-button-text
+      width: 100%
+
+.service-page-consult-details
+  width: 28%
+
+.service-page-consult-detail-item
+  margin-bottom: 40px
+  &:last-child
+    margin-bottom: 0
+  &.--schedule
+    .service-page-consult-detail-item-text
+      max-width: 160px
+      width: 100%
+      margin: 0
+
+.service-page-consult-detail-item-title
+  margin-bottom: 5px
+
+.service-page-consult-detail-item-title-text
+  font-family: $Poppins_Medium
+  font-size: 18px
+  line-height: 150%
+  color: $color_black
+  margin: 0
+
+.service-page-consult-detail-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black3
+  margin: 0
+  a
+    color: $color_blue
+    text-decoration: underline
+
+.service-page-consult-detail-item-link
+  display: flex
+
+.service-page-consult-detail-item-icon
+  margin-right: 7px
+  position: relative
+  top: 2px
+
+@media #{$max_1280}
+  .service-page-consult-form-details
+    flex-wrap: wrap
+
+  .service-page-consult-form
+    width: 100%
+
+  .service-page-consult-details
+    width: 100%
+    margin-top: 40px
+
+  .service-page-consult-detail-item
+    margin-bottom: 25px
+
+//faq
+.service-page-faqs-item
+  margin-bottom: 10px
+  background-color: $color_white
+  border-radius: 10px
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.08)
+  padding-bottom: 8px
+  &:last-child
+    margin-bottom: 0
+
+.service-page-faqs-item-title
+  padding: 28px 70px 20px 23px
+  box-sizing: border-box
+  box-sizing: border-box
+  position: relative
+  cursor: pointer
+  &.---active
+    .service-page-faqs-item-icon
+      .--down
+        +show
+      .--up
+        +hide
+
+.service-page-faqs-item-title-text
+  font-family: $Poppins_Medium
+  font-size: 18px
+  line-height: 144.444%
+  color: $color_black7
+  margin: 0
+
+.service-page-faqs-item-icon
+  position: absolute
+  width: 45px
+  height: 45px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: #fff
+  top: 18px
+  right: 20px
+  transition: $transition
+  .--up
+    transition: $transition
+  .--down
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: $transition
+    +hide
+
+.service-page-faqs-item-content-in
+  padding: 0 94px 26px 23px
+
+.service-page-faqs-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+
+//User guide
+.service-page-userguide-title
+  margin-bottom: 17px
+
+.service-page-userguide-items
+  display: flex
+  flex-wrap: wrap
+
+.service-page-userguide-item
+  width: 49%
+  margin: 0
+  margin-right: 2%
+  margin-bottom: 2%
+  &:nth-child(2n+2)
+    margin-right: 0
+
+@media #{$max_767}
+  .service-page-userguide-item
+    width: 100%
+    margin-right: 0
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0

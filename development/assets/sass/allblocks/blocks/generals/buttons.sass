@@ -1,0 +1,168 @@
+.general-button
+	display: inline-block
+	position: relative
+	border-radius: 0
+	background: none
+	border: none
+	padding: 0
+	margin: 0
+	appearance: none
+	box-sizing: border-box
+	letter-spacing: normal
+	cursor: pointer
+
+// button text
+.general-button-text
+	border-radius: 0
+	background: none
+	border: none
+	padding: 0
+	margin: 0
+	appearance: none
+	position: relative
+	z-index: 3
+	display: block
+	transition: $transition
+
+// button icon
+.general-button-icon
+	display: block
+	font-style: normal
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: 0
+	z-index: 4
+	font-size: 20px
+	display: flex
+	align-items: center
+
+@keyframes icon-submit
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(359deg)
+
+// button modificardores
+.general-button
+	&.--icon-right
+		.general-button-text
+			padding: 0 50px 0 30px
+		.general-button-icon
+			right: 25px
+	&.--icon-left
+		.general-button-text
+			padding: 0 30px 0 50px
+		.general-button-icon
+			left: 25px
+
+.general-button
+	&.--type0
+		.general-button-text
+			height: 45px
+			line-height: 45px
+	&.--type1
+		.general-button-text
+			height: 45px
+			line-height: 45px
+			padding: 0 30px
+	&.--type2
+		position: relative
+		display: flex
+		align-items: center
+		.general-button-text
+			font-family: $Poppins_Medium
+			font-size: 18px
+			transform: translateX(-25px)
+			transition: $transition
+			padding: 0
+		.general-button-figure
+			overflow: inherit
+			.--circle
+				transition: $transition
+			.--arrow
+				transform: translateX(-25px)
+				transition: $transition
+	&.--type3
+		.general-button-text
+			height: 48px
+			line-height: 48px
+			padding: 0 30px
+	&.--lightblue-normal
+		.general-button-text
+			font-family: $Poppins_SemiBold
+			border-radius: 10px
+			background-color: $color_lightblue
+			color: $color_white
+			font-size: 16px
+	&.--lightblue
+		.general-button-text
+			color: $color_lightblue
+		.general-button-figure
+			.--circle
+				stroke: $color_lightblue
+			.--arrow
+				fill: $color_lightblue
+	&.--white
+		.general-button-text
+			color: $color_white
+		.general-button-figure
+			.--circle
+				stroke: $color_white
+			.--arrow
+				fill: $color_white
+	&.--border-blue
+		.general-button-text
+			font-family: $Poppins_SemiBold
+			border-radius: 10px
+			border: 1px solid $color_blue2
+			color: $color_blue2
+			font-size: 16px
+	&.--border-white
+		.general-button-text
+			font-family: $Poppins_SemiBold
+			border-radius: 10px
+			border: 1px solid $color_white
+			color: $color_white
+			font-size: 16px
+	&.--lightblue-noborder
+		.general-button-text
+			font-family: $Poppins_SemiBold
+			border-radius: 10px
+			background-color: $color_lightblue2
+			color: $color_lightblue
+			border: 1px solid $color_lightblue2
+			font-size: 16px
+
+@media #{$min-1025}
+	.general-button
+		&.--type2:hover
+			.general-button-text
+				transform: translateX(0)
+			.general-button-figure
+				.--arrow
+					transform: translateX(0)
+		&.--border-blue:hover
+			.general-button-text
+				background-color: $color_blue2
+				color: $color_white
+			.general-button-icon::before
+				color: $color_white
+		&.--lightblue-normal:hover
+			.general-button-text
+				background-color: $color_lightblue6
+
+@media #{$max-767}
+	.general-button-text
+		height: 35px
+		line-height: 35px
+		font-size: 13px
+
+	.general-button.--icon-right .general-button-icon
+		right: 18px
+
+	.general-button.--icon-right .general-button-text
+		padding: 0 38px 0 20px
+
+	.general-button.--type1 .general-button-text
+		padding: 0 20px

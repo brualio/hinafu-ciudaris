@@ -1,0 +1,285 @@
+.referrals-page-banner
+  background-color: $color_blue
+  padding-bottom: 266px
+  padding-top: 92px
+  .main-banner-info-content
+    padding-bottom: 46px
+  .main-banner-figure
+    padding-bottom: 35px
+
+.referrals-page-images
+  margin-top: -200px
+  position: relative
+  z-index: 2
+
+.referrals-page-img
+  +imgfull
+
+.referrals-page-steps
+  padding-top: 50px
+  padding-bottom: 55px
+
+.referrals-page-steps-title-info-carrousel
+  display: flex
+  align-items: center
+
+.referrals-page-steps-title-info
+  width: 355px
+
+.referrals-page-steps-carrousel
+  width: calc( 100% - 355px )
+
+.referrals-page-steps-title-text
+  font-family: $Poppins_Medium
+  font-size: 34px
+  line-height: 123.529%
+  color: $color_blue
+  margin: 0
+
+.referrals-page-steps-text
+  font-family: $Poppins_Regular
+  color: $color_black
+  font-size: 16px
+  line-height: 150%
+  margin-top: 12px
+
+.referrals-page-steps-carrousel-block-arrows-list
+  position: relative
+  padding: 0 50px
+
+.referrals-page-steps-carrousel
+  .swiper-slide
+    height: auto
+
+.referrals-page-steps-carrousel-list
+  overflow: hidden
+  position: relative
+  padding: 20px
+
+.referrals-page-steps-item
+  border-radius: 10px
+  background-color: $color_white
+  padding: 30px 20px
+  box-sizing: border-box
+  display: flex
+  align-items: flex-start
+  height: 100%
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15)
+    pointer-events: none
+    z-index: -1
+    border-radius: inherit
+
+.referrals-page-steps-item-image
+  width: 61px
+  height: 61px
+  margin: 0
+
+.referrals-page-steps-item-info
+  width: calc(100% - 61px)
+  padding-left: 25px
+  box-sizing: border-box
+
+.referrals-page-steps-item-title-text
+  font-family: $Poppins_Medium
+  color: $color_black2
+  font-size: 24px
+  line-height: 125%
+  margin: 0
+
+.referrals-page-steps-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  color: $color_black2
+  line-height: 150%
+  margin-top: 6px
+
+.referrals-page-steps-carrousel-block-pagination
+  text-align: center
+  font-family: $Poppins_Light
+  font-size: 12px
+  .swiper-pagination-current
+    font-family: $Poppins_SemiBold
+    color: $color_blue
+    font-size: 24px
+  .swiper-pagination-total
+    font-family: $Poppins_SemiBold
+    color: $color_blue
+    font-size: 16px
+
+.referrals-page-steps-carrousel-arrows
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  max-width: 100%
+  margin: auto
+  pointer-events: none
+  z-index: 3
+  font-size: 0
+  display: flex
+  justify-content: space-between
+
+.referrals-page-form-title-form
+  background-color: $color_lightblue3
+  padding: 38px 66px
+  box-sizing: border-box
+  border-radius: 10px
+
+.referrals-page-form-title
+  .general-title-text
+    margin-top: 7px
+
+.referrals-page-form-form
+  padding-top: 26px
+  .form-block
+    margin-top: 0
+  .form-block-1-2
+    display: flex
+    justify-content: space-between
+  .form-block-1
+    width: 47.5%
+  .form-block-2
+    width: 47.5%
+  .form-block-checkbox
+    margin-top: 28px
+    .general-input
+      text-align: center
+  .form-block-button
+    text-align: center
+    margin-top: 18px
+    .general-button
+      width: 135.448px
+    .general-button-text
+      width: 100%
+  .form-block-pie p
+    opacity: 0.7
+
+.referrals-page-terms
+  padding-top: 37px
+  padding-bottom: 62px
+  text-align: center
+
+.referrals-page-terms-title-group
+  display: flex
+  align-items: center
+  justify-content: center
+
+.referrals-page-terms-title
+  margin-right: 13px
+
+.referrals-page-terms-title-text
+  font-family: $Poppins_Medium
+  color: $color_blue
+  font-size: 14px
+  line-height: 142.857%
+  text-transform: uppercase
+  letter-spacing: 2px
+  margin: 0
+
+.referrals-page-terms-text
+  font-size: 16px
+  line-height: 125%
+  font-family: $Poppins_Regular
+  color: $color_black
+  p
+    margin: 0
+  a
+    text-decoration: underline
+    color: $color_blue
+
+@media #{$max_1280}
+  .referrals-page-steps
+    padding-top: 70px
+
+  .referrals-page-steps-title-info-carrousel
+    flex-wrap: wrap
+
+  .referrals-page-steps-title-info
+    width: 100%
+    margin-bottom: 20px
+
+  .referrals-page-steps-carrousel
+    width: 100%
+
+  .referrals-page-form-title-form
+    padding: 35px 45px
+
+@media #{$max_1024}
+  .referrals-page-banner
+    padding-bottom: 28%
+    padding-top: 70px
+
+  .referrals-page-images
+    margin-top: -20%
+
+  .referrals-page-steps-title-text
+    font-size: 30px
+
+@media #{$max_960}
+  .referrals-page-steps-item
+    flex-wrap: wrap
+
+  .referrals-page-steps-item-info
+    width: 100%
+    padding-left: 0
+    margin-top: 15px
+
+  .referrals-page-form-form .form-block-1-2
+    flex-wrap: wrap
+
+  .referrals-page-form-form .form-block-1
+    width: 100%
+
+  .referrals-page-form-form .form-block-2
+    width: 100%
+    margin-top: 30px
+
+@media #{$max_767}
+  .referrals-page-banner
+    padding-top: 65px
+    .main-banner-info-content
+      padding-bottom: 45px
+
+  .referrals-page-steps
+    padding-top: 50px
+    padding-bottom: 50px
+
+  .referrals-page-steps-carrousel-block-arrows-list
+    padding: 0
+
+  .referrals-page-steps-carrousel-arrows
+    position: static
+    justify-content: center
+    .general-arrow
+      margin: 0 7px
+
+  .referrals-page-steps-title-text
+    font-size: 28px
+
+  .referrals-page-steps-carrousel-block-pagination
+    display: none
+
+  .referrals-page-terms
+    padding-bottom: 50px
+
+  .referrals-page-terms-title-group
+    flex-wrap: wrap
+
+  .referrals-page-form-title-form
+    padding: 35px 25px
+
+  .referrals-page-terms-title
+    margin-right: 0
+
+  .referrals-page-terms-text
+    width: 100%
+    margin-top: 5px

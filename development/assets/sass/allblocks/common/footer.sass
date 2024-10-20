@@ -1,0 +1,438 @@
+
+.main-footer
+	background: $color_darkblue
+	padding-top: 42px
+	padding-bottom: 28px
+
+.main-footer-top
+	padding-bottom: 42px
+
+.main-footer-left-right
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+
+.main-footer-right
+	width: 23.189%
+
+.main-footer-left
+	width: 70.363%
+
+.main-footer-left-top
+	padding-bottom: 43px
+
+.main-footer-left-top-line1
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.main-footer-left-top-line2
+	padding-top: 42px
+
+.main-footer-logo
+	width: 180px
+	margin: 0
+	display: block
+
+.main-footer-logo-img
+	+imgauto
+	margin: 0
+
+.main-footer-members
+	display: flex
+	align-items: center
+
+.main-footer-members-title-text
+	font-size: 14px
+	line-height: 128.571%
+	font-family: $Poppins_Regular
+	color: $color_white
+	margin: 0
+
+.main-footer-members-list
+	display: flex
+	align-items: center
+	margin-left: 21px
+
+.main-footer-members-item-image
+	margin: 0
+	margin-right: 23px
+	&:last-child
+		margin-right: 0
+
+.main-footer-members-item-img
+	+imgauto
+
+.main-footer-detail-items
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.main-footer-detail-item-title
+	margin-bottom: 8px
+
+.main-footer-detail-item-title-text
+	font-family: $Poppins_Regular
+	font-size: 14px
+	color: $color_white
+	margin: 0
+
+.main-footer-detail-item-link
+	display: flex
+	align-items: center
+
+.main-footer-detail-item-link-icon
+	margin: 0
+	margin-right: 8px
+	color: $color_white
+	font-size: 15px
+
+.main-footer-detail-item-link-text
+	font-family: $Poppins_Regular
+	font-size: 16px
+	color: $color_white
+	margin: 0
+
+.main-footer-detail-item.--telephone
+	.main-footer-detail-item-link-icon
+		font-size: 18px
+
+.main-footer-social
+	> ul
+		display: flex
+		align-items: center
+	> ul > li
+		margin-right: 9px
+		&:last-child
+			margin-right: 0
+	> ul > li > a
+		width: 36px
+		height: 36px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $color_white
+		font-size: 20px
+	> ul > li.--linkedin2 > a
+		font-size: 23px
+
+.main-footer-navs
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding-top: 41px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: $color_darkblue3
+
+.main-footer-nav
+	padding-right: 10px
+	&:last-child
+		padding-right: 0
+	> ul
+		margin: 0
+	> ul > li
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	> ul > li > a
+		font-family: $Poppins_Regular
+		color: $color_white
+		font-size: 14px
+		line-height: 142.857%
+	> ul > li.footer--complaints > a
+		border-radius: 5px
+		border: 1px solid $color_darkblue3
+		max-width: 196px
+		width: 100%
+		display: flex
+		padding: 8px 6px 8px 73px
+		box-sizing: border-box
+		position: relative
+		&::before
+			content: ""
+			display: inline-block
+			background-image: url('../images/complaints.svg')
+			width: 53px
+			height: 22px
+			+bgcontain
+			position: absolute
+			left: 9px
+			top: 50%
+			transform: translateY(-50%)
+
+.main-footer-quote-title
+	margin-bottom: 0
+
+.main-footer-quote-title-text
+	font-size: 38px
+	line-height: 110.526%
+	font-family: $Poppins_Medium
+	color: $color_white
+	margin: 0
+
+.main-footer-quote-text
+	margin-top: 10px
+	font-family: $Poppins_Regular
+	color: $color_white
+	font-size: 16px
+	line-height: 150%
+
+.main-footer-quote-button
+	padding-top: 23px
+
+.main-footer-quote-image
+	padding-top: 42px
+	margin: 0
+
+.main-footer-quote-img
+	margin: 0
+	+imgauto
+
+.main-footer-legal
+	font-size: 10px
+	line-height: 110%
+	font-family: $Poppins_Regular
+	color: $color_white
+	padding-top: 35px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: $color_darkblue3
+
+.main-footer-pie
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 40px
+
+.main-footer-copyright
+	font-size: 14px
+	line-height: 142.857%
+	font-family: $Poppins_Regular
+	color: $color_white
+
+.main-footer-ruc
+	font-size: 14px
+	line-height: 142.857%
+	font-family: $Poppins_Regular
+	color: $color_white
+
+.main-footer-desing
+	display: flex
+	align-items: center
+	font-size: 14px
+	line-height: 142.857%
+	font-family: $Poppins_Regular
+	color: $color_white
+	margin: 0
+
+.main-footer-desing-img
+	margin: 0
+	margin-left: 5px
+	width: 80.356px
+	height: 14px
+
+.main-footer-mobile
+	display: none
+
+@media #{$max_1280}
+	.main-footer-detail-items
+		flex-wrap: wrap
+
+	.main-footer-detail-item
+		width: 50%
+		&:first-child
+			width: 100%
+			margin-bottom: 15px
+
+	.main-footer-quote-title-text
+		font-size: 33px
+
+	.main-footer-quote-text
+		font-size: 15px
+
+@media #{$max_1024}
+	.main-footer
+		padding-top: 33px
+		padding-bottom: 27px
+
+	.main-footer-pie
+		flex-wrap: wrap
+		flex-direction: column
+		padding-top: 24px
+		position: relative
+		text-align: center
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $color_darkblue3
+			transition: $transition
+
+	.main-footer-copyright
+		margin-bottom: 8px
+
+	.main-footer-desing
+		margin-top: 8px
+
+	.main-footer-desktop
+		display: none
+
+	.main-footer-mobile
+		display: block
+		text-align: center
+
+	.main-footer-logo
+		margin: auto
+		margin-bottom: 20px
+
+	.main-footer-quote-button
+		padding-top: 17px
+		display: flex
+		justify-content: center
+
+	.main-footer-detail-items
+		padding-top: 30px
+
+	.main-footer-detail-item
+		width: 100%
+		margin-bottom: 20px
+		&:first-child
+			margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+
+	.main-footer-detail-item-link-icon
+		font-size: 20px
+
+	.main-footer-detail-item-link
+		justify-content: center
+
+	.main-footer-social>ul
+		justify-content: center
+
+	.main-footer-social>ul>li
+		margin-right: 20px
+
+	.main-footer-social>ul>li>a
+		width: 50px
+		height: 50px
+		font-size: 25px
+
+	.main-footer-social>ul>li.--linkedin2>a
+		font-size: 28px
+
+	.main-footer-members
+		flex-wrap: wrap
+		padding-top: 30px
+		justify-content: center
+
+	.main-footer-members-title
+		width: 100%
+		margin-bottom: 6px
+
+	.main-footer-members-title-text
+		br
+			display: none
+
+	.main-footer-members-list
+		margin: 0
+		justify-content: center
+
+	.main-footer-legal-mobile
+		padding-top: 34px
+
+	.main-footer-legal-mobile-content
+		padding: 0 18px 1px 18px
+
+	.main-footer-nav
+		padding-right: 0
+
+	.main-footer-nav>ul>li
+		margin-bottom: 11px
+
+	.main-footer-nav.--menu4
+		margin-top: 11px
+
+	.main-footer-legal
+		padding-top: 28px
+		padding-bottom: 27px
+		text-align: left
+
+	.main-footer-legal::before
+		display: none
+
+	.main-footer-legal-mobile-title
+		padding: 20px 0
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $color_darkblue3
+			transition: $transition
+		&.---active
+			.main-footer-legal-mobile-title-icon
+				transform: rotate(180deg)
+
+	.main-footer-legal-mobile-title-text
+		font-family: $Poppins_Medium
+		color: $color_white
+		font-size: 14px
+		line-height: 142.857%
+		letter-spacing: 2px
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0
+
+	.main-footer-legal-mobile-title-icon
+		margin-left: 11px
+		display: flex
+		align-items: center
+		transition: $transition
+
+	.main-footer-nav>ul>li.footer--complaints>a
+		max-width: 320px
+		padding: 13px
+		justify-content: center
+		align-items: center
+
+	.main-footer-nav>ul>li.footer--complaints>a::before
+		position: static
+		transform: none
+		width: 66px
+		height: 25px
+		margin-right: 17px
+
+	.main-footer-quote-title-text
+		font-size: 30px
+
+@media #{$max_767}
+	.main-footer-logo
+		width: 151px
+
+	.main-footer-quote-title-text
+		font-size: 24px
+
+	.main-footer-nav
+		text-align: left

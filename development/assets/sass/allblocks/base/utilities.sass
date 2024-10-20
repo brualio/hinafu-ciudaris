@@ -1,0 +1,106 @@
+//mediaqueries
+
+//Min
+$min_2601: "(min-width: 2601px)"
+$min_1921: "(min-width: 1921px)"
+$min_1025: "(min-width: 1025px)"
+$min_768: "(min-width: 768px)"
+
+//Min
+$min_1025_max_2600: "(min-width: 1025px) and (max-width: 2600px)"
+
+//Min
+$min_1921_max_2600: "(min-width: 1921px) and (max-width: 2600px)"
+$min_1600_max_1920: "(min-width: 1600px) and (max-width: 1920px)"
+$min_1200_max_1599: "(min-width: 1200px) and (max-width: 1599px)"
+$min_1025_max_1199: "(min-width: 1025px) and (max-width: 1199px)"
+$min_768_max_1024: "(min-width: 768px) and (max-width: 1024px)"
+$min_320_max_767: "(min-width: 320px) and (max-width: 767px)"
+
+//Max
+$max_2600: "(max-width: 2600px)"
+$max_1920: "(max-width: 1920px)"
+$max_1680: "(max-width: 1680px)"
+$max_1600: "(max-width: 1600px)"
+$max_1450: "(max-width: 1450px)"
+$max_1366: "(max-width: 1366px)"
+$max_1280: "(max-width: 1280px)"
+$max_1200: "(max-width: 1200px)"
+$max_1024: "(max-width: 1024px)"
+$max_960: "(max-width: 960px)"
+$max_782: "(max-width: 782px)"
+$max_768: "(max-width: 768px)"
+$max_767: "(max-width: 767px)"
+$max_640: "(max-width: 640px)"
+$max_600: "(max-width: 600px)"
+$max_480: "(max-width: 480px)"
+$max_375: "(max-width: 375px)"
+$max_365: "(max-width: 365px)"
+$max_320: "(max-width: 320px)"
+
+//variables generales
+$transition: all 0.25s ease-in-out
+
+.--uppercase
+	text-transform: uppercase
+
+.--list-none
+	ul
+		margin: 0
+		padding: 0
+	li
+		list-style: none
+
+ul.--list-none
+	padding: 0
+	li
+		list-style: none
+
+//mixins
+=hide
+	opacity: 0
+	visibility: hidden
+
+=show
+	opacity: 1
+	visibility: visible
+
+=bgcover
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+
+=bgdefault
+	background-position: center center
+	background-size: 100%
+	background-repeat: no-repeat
+
+=bg100
+	background-position: center center
+	background-size: 100%
+	background-repeat: no-repeat
+
+=bgcontain
+	background-position: center center
+	background-size: contain
+	background-repeat: no-repeat
+
+=imgfull
+	width: 100%
+	height: auto
+	display: block
+
+=imgauto
+	max-width: 100%
+	height: auto
+	display: block
+
+=clearfix
+	&:before
+		content: ''
+		display: block
+		clear: both
+	&:after
+		content: ''
+		display: block
+		clear: both

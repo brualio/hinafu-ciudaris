@@ -1,0 +1,231 @@
+.aboutus-banner
+  padding-top: 48px
+  padding-bottom: 275px
+  background-color: $color_blue
+
+.aboutus-banner-title-image
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+
+.aboutus-banner-title
+  .general-title-subtitle
+    margin-top: 15px
+
+//Image
+.aboutus-image
+  position: relative
+  margin-top: -225px
+
+.aboutus-image-img
+  +imgauto
+
+@media #{$max_1024}
+  .aboutus-image
+    margin-top: -22%
+
+@media #{$max_1024}
+  .aboutus-banner
+    padding-bottom: 27%
+
+@media #{$max_767}
+  .aboutus-banner-image
+    display: none
+
+//Projects
+.aboutus-projects
+  padding-top: 78px
+  padding-bottom: 92px
+
+.aboutus-projects-content
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+.aboutus-projects-info
+  width: 440px
+  width: 32%
+
+.aboutus-projects-button
+  margin-top: 16px
+
+.aboutus-projects-text
+  width: 892px
+  width: 63.715%
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+
+@media #{$max_1024}
+  .aboutus-projects
+    padding-top: 70px
+    padding-bottom: 70px
+
+@media #{$max_960}
+  .aboutus-projects-content
+    flex-wrap: wrap
+
+  .aboutus-projects-info
+    width: 100%
+
+  .aboutus-projects-text
+    width: 100%
+    margin-top: 25px
+
+@media #{$max_767}
+  .aboutus-projects
+    padding-top: 60px
+    padding-bottom: 60px
+
+//Mision vision
+.aboutus-mv-content
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-right: 20px
+  box-sizing: border-box
+
+.aboutus-mv-video
+  width: 870px
+  width: 63%
+  border-radius: 10px
+  overflow: hidden
+  font-size: 0
+  video
+    width: 100%
+    height: auto
+
+.aboutus-mv-items
+  width: 421px
+  width: 30.5%
+
+.aboutus-mv-item
+  margin-bottom: 40px
+  &:last-child
+    margin-bottom: 0
+
+.aboutus-mv-item-title-text
+  font-family: $Poppins_Medium
+  font-size: 24px
+  line-height: 125%
+  color: $color_black
+  margin: 0
+
+.aboutus-mv-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  margin-top: 10px
+
+@media #{$max_1024}
+  .aboutus-mv-content
+    flex-wrap: wrap
+
+  .aboutus-mv-items
+    width: 100%
+    margin-top: 30px
+
+  .aboutus-mv-video
+    width: 100%
+
+//Details
+.aboutus-details
+  padding-top: 79px
+  padding-bottom: 85px
+
+.aboutus-details-items
+  display: flex
+  flex-wrap: wrap
+
+.aboutus-details-item
+  width: 19%
+  margin: 0
+  margin-top: 10px
+  margin-bottom: 10px
+  margin-right: 8%
+  &:nth-child(4n+4)
+    margin-right: 0
+
+.aboutus-details-item-icon
+  width: 75px
+  height: 75px
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $color_blue
+
+.aboutus-details-item-icon-img
+  +imgauto
+
+.aboutus-details-item-info
+  margin-top: 27px
+
+.aboutus-details-item-title-text
+  font-family: $Poppins_Regular
+  font-size: 24px
+  line-height: 133.333%
+  color: $color_black
+  margin: 0
+
+.aboutus-details-item-text
+  margin-top: 12px
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+
+@media #{$max_1024}
+  .aboutus-details-item
+    width: 48%
+    margin-right: 4% !important
+    &:nth-child(4n+4)
+      margin-right: 4 !important
+    &:nth-child(odd)
+      margin-right: 0 !important
+
+  .aboutus-details-item-title-text
+    font-size: 22px
+
+@media #{$max_767}
+  .aboutus-details-item
+    width: 100%
+    margin-right: 0
+    &:nth-child(2n+2)
+      margin-right: 0
+
+  .aboutus-details-item-title-text
+    font-size: 20px
+
+//path
+.aboutus-path
+  background-color: $color_lightblue3
+  padding-top: 51px
+
+.aboutus-path-title
+  max-width: 456px
+  width: 100%
+  margin: 0
+  .general-title-subtitle
+    margin-top: 10px
+
+//Location
+.aboutus-location
+  .location-general
+    padding-top: 83px
+    padding-bottom: 91px
+
+@media #{$max_1024}
+  .aboutus-location
+    .location-general
+      padding-top: 70px
+      padding-bottom: 70px
+
+@media #{$max_767}
+  .aboutus-location
+    .location-general
+      padding-top: 60px
+      padding-bottom: 60px

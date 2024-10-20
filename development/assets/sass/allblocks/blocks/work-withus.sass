@@ -1,0 +1,259 @@
+//Banner
+.workwithus-banner
+  padding-top: 92px
+  padding-bottom: 73px
+  .workwithus-banner-title
+    .general-title-subtitle
+      margin-top: 15px
+  .main-banner-info-content
+    padding-bottom: 46px
+  .main-banner-figure
+    padding-bottom: 35px
+
+//Jobs - Form
+.workwithus-jobs-form
+  margin: 0
+  padding-bottom: 67px
+
+.workwithus-jobs-form-block
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+
+.workwithus-jobs
+  width: 54.572%
+  margin-right: 2.5%
+
+.workwithus-jobs-item
+  margin-bottom: 20px
+  background-color: $color_white
+  border-radius: 10px
+  &:last-child
+    margin-bottom: 0
+
+.workwithus-jobs-item-title
+  padding: 39px 65px 30px 30px
+  box-sizing: border-box
+  position: relative
+  cursor: pointer
+  &.---active
+    .workwithus-jobs-content-item-icon
+      .--down
+        +show
+      .--up
+        +hide
+
+.workwithus-jobs-content-item-icon
+  position: absolute
+  width: 45px
+  height: 45px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: #fff
+  top: 21px
+  right: 19px
+  transition: $transition
+  .--up
+    transition: $transition
+  .--down
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: $transition
+    +hide
+
+.workwithus-jobs-item-title-text
+  font-family: $Poppins_Medium
+  font-size: 24px
+  color: $color_black5
+  line-height: 125%
+  margin: 0
+
+.workwithus-jobs-item-content
+  padding: 0 27px 28px 27px
+
+.workwithus-jobs-item-content-in
+  padding-top: 28px
+  position: relative
+
+.workwithus-jobs-item-description
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+
+.workwithus-jobs-content-items
+  padding-top: 72px
+
+.workwithus-jobs-content-item
+  margin-bottom: 58px
+  &:last-child
+    margin-bottom: 0
+
+.workwithus-jobs-content-item-title
+  margin-bottom: 20px
+
+.workwithus-jobs-content-item-title-text
+  font-family: $Poppins_Medium
+  color: $color_blue7
+  font-size: 14px
+  line-height: 142.857%
+  letter-spacing: 2px
+  text-transform: uppercase
+  margin: 0
+
+.workwithus-jobs-content-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    position: relative
+    padding-left: 12px
+    margin-bottom: 1px
+    &:last-child
+      margin-bottom: 0
+    &::before
+      content: ""
+      position: absolute
+      top: 10px
+      left: 0
+      width: 4px
+      height: 4px
+      border-radius: 100%
+      background-color: $color_black
+
+.workwithus-jobs-content-postulation
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 90px
+
+.workwithus-jobs-content-postulation-title
+  margin-right: 20px
+
+.workwithus-jobs-content-postulation-title-text
+  font-family: $Poppins_Medium
+  font-size: 20px
+  line-height: 130%
+  color: $color_black5
+  margin: 0
+
+.workwithus-jobs-content-postulation-items
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: flex-end
+
+.workwithus-jobs-content-postulation-item
+  margin: 3px
+  display: block
+
+.workwithus-jobs-content-postulation-item-img
+  +imgauto
+
+.workwithus-form-wrap
+  width: 42.858%
+
+.workwithus-form
+  padding: 39px 39px 34px 41px
+  box-sizing: border-box
+  border-radius: 10px
+  background-color: $color_lightblue3
+  .form-block-button
+    margin-top: 22px
+    .general-button
+      width: 135.448px
+      .general-button-text
+        width: 100%
+  .form-block-checkbox
+    margin-top: 10px
+
+.workwithus-form-title
+  margin-bottom: 19px
+  .general-title-text
+    margin-top: 5px
+
+@media #{$max_1024}
+  .workwithus-banner
+    padding-top: 75px
+    padding-bottom: 45px
+
+  .workwithus-jobs-form-block
+    flex-wrap: wrap
+
+  .workwithus-jobs
+    width: 100%
+    margin-right: 0
+
+  .workwithus-form-wrap
+    width: 100%
+    margin-top: 60px
+
+  .workwithus-jobs-content-postulation-title-text
+    font-size: 18px
+
+@media #{$max_767}
+  .workwithus-banner
+    padding-top: 65px
+    padding-bottom: 45px
+    .main-banner-info-content
+      padding-bottom: 45px
+
+  .workwithus-jobs-form
+    padding-bottom: 60px
+
+  .workwithus-form-title-text
+    font-size: 20px
+
+  .workwithus-jobs-item-title
+    padding: 25px 60px 25px 25px
+
+  .workwithus-jobs-content-item-title-text
+    font-size: 13px
+
+  .workwithus-jobs-item-content
+    padding: 0 20px 30px 20px
+
+  .workwithus-jobs-content-items
+    padding-top: 55px
+
+  .workwithus-jobs-content-item
+    margin-bottom: 35px
+
+  .workwithus-jobs-content-item-icon
+    right: 25px
+    top: 12px
+
+  .workwithus-jobs-content-postulation
+    padding-top: 50px
+
+  .workwithus-jobs-item-content-in
+    padding-top: 25px
+
+  .workwithus-jobs-item-title-text
+    font-size: 18px
+
+  .workwithus-jobs-content-item-text
+    font-size: 15px
+
+  .workwithus-form
+    padding: 30px 20px
+
+@media #{$max_480}
+  .workwithus-jobs-content-postulation
+    padding-top: 50px
+    flex-wrap: wrap
+
+  .workwithus-jobs-content-postulation-items
+    width: 100%
+    justify-content: flex-start
+    margin-top: 20px

@@ -1,0 +1,1364 @@
+
+.project-detail-banner
+  position: relative
+
+//video
+.project-detail-banner-video
+  height: 800px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.35) 100%)
+    z-index: 1
+
+.project-detail-banner-video-video
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  width: 100%
+  height: 100%
+  object-fit: cover
+  z-index: 0
+
+//carrousel
+.project-detail-banner-carrousel
+  position: relative
+  z-index: 1
+
+.project-detail-banner-carrousel-item-background
+  height: 800px
+  +bgcover
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.35) 100%)
+
+.project-detail-banner-info
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 800px
+  z-index: 2
+  overflow: hidden
+
+.project-detail-banner-info-block
+  height: 800px
+  display: flex
+  align-items: center
+  padding-bottom: 50px
+  box-sizing: border-box
+  position: relative
+
+.project-detail-banner-info-category
+  display: inline-block
+  border-radius: 5px
+  background-color: $color_blue8
+  padding: 6px 10px
+  box-sizing: border-box
+  font-family: $Poppins_SemiBold
+  font-size: 14px
+  line-height: 121.429%
+  letter-spacing: 1px
+  text-transform: uppercase
+  color: $color_white
+  margin: 0
+
+.project-detail-banner-info-title
+  margin-top: 9px
+
+.project-detail-banner-info-title-text
+  font-family: $Poppins_Medium
+  font-size: 52px
+  line-height: 111.538%
+  color: $color_white
+  margin: 0
+
+.project-detail-banner-details
+  display: flex
+  align-items: center
+  position: absolute
+  bottom: 28px
+  left: 0
+  width: 36%
+
+.project-detail-banner-logotipo
+  margin: 0
+  padding-right: 30px
+
+.project-detail-banner-logotipo-img
+  +imgauto
+
+.project-detail-banner-district-address
+  padding-left: 30px
+  border-left: 1px solid rgba(255, 255, 255, 0.50)
+
+.project-detail-banner-district
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_white
+
+.project-detail-banner-district-icon
+  margin-right: 6px
+
+.project-detail-banner-address
+  margin-top: 3px
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_white
+
+.project-banner-carrousel-pagination
+  position: absolute
+  bottom: 142px
+  right: 0
+
+.project-detail-banner-mobile
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 2
+  overflow: hidden
+  display: none
+
+.project-detail-banner-mobile-background
+  height: 100%
+  width: 100%
+  +bgcover
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.35) 100%)
+
+@media #{$max_1450}
+  .project-detail-banner-info-title-text
+    font-size: 45px
+
+@media #{$max_1280}
+  .project-detail-banner-info-title-text
+    font-size: 45px
+
+@media #{$max_1024}
+  .project-detail-banner-carrousel-item-background
+    height: 700px
+
+  .project-detail-banner-info-block
+    height: 700px
+
+  .project-detail-banner-info
+    height: 700px
+
+  .project-detail-banner-info-title-text
+    font-size: 35px
+
+  .project-detail-banner-video
+    height: 700px
+
+  .project-detail-banner-details
+    width: 100%
+
+  .project-banner-carrousel-pagination
+    bottom: 30px
+
+@media #{$max_767}
+  .project-detail-banner-info-title
+    margin-top: 10px
+
+  .project-detail-banner-info-title-text
+    font-size: 28px
+    line-height: 121.429%
+
+  .project-detail-banner-info-category
+    font-size: 12px
+
+  .project-detail-banner-details
+    position: static
+    padding-top: 75px
+
+  .project-detail-banner-logotipo
+    padding-right: 17px
+    max-width: 90px
+
+  .project-detail-banner-district-address
+    padding-left: 17px
+
+  .project-detail-banner-district
+    font-size: 14px
+
+  .project-detail-banner-address
+    font-size: 12px
+
+  .project-banner-carrousel-pagination
+    display: none
+
+  .project-detail-banner-carrousel-item-background
+    height: 100%
+
+  .project-detail-banner-carrousel
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .project-detail-banner-carrousel-slide
+    height: 100%
+
+  .project-detail-banner-carrousel-item
+    height: 100%
+
+  .project-detail-banner-info-block
+    height: auto
+    padding-top: 93px
+    padding-bottom: 33px
+
+  .project-detail-banner-info
+    position: relative
+    height: auto
+
+  .project-detail-banner-video
+    height: auto
+
+  .project-detail-banner-mobile
+    display: block
+
+  .project-detail-banner-carrousel
+    display: none
+
+  .project-detail-banner-carrousel
+    display: none
+
+//About
+.project-detail-about-info-content
+  display: flex
+  align-items: flex-start
+  padding: 0 15px
+  box-sizing: border-box
+
+.project-detail-about-info
+  width: 38%
+  padding-top: 85px
+  padding-right: 25px
+  padding-bottom: 50px
+  box-sizing: border-box
+
+.project-detail-about-title
+  .general-title-subtitle
+    margin-top: 16px
+  .general-title-text
+    a
+      color: $color_blue6
+
+.project-detail-about-details
+  display: flex
+  align-items: flex-start
+  margin-top: 40px
+
+.project-detail-about-detail
+  margin-right: 90px
+  &:last-child
+    margin-right: 0
+
+.project-detail-about-detail-text
+  font-family: $Poppins_Medium
+  font-size: 52px
+  line-height: 111.538%
+  color: $color_black3
+
+.project-detail-about-detail-txt
+  font-family: $Poppins_Medium
+  font-size: 18px
+  line-height: 111.111%
+  color: $color_black3
+
+.project-detail-about-buttons
+  margin-top: 38px
+  padding-bottom: 49px
+
+.project-detail-about-button
+  margin-right: 12px
+  &:last-child
+    margin-right: 0
+
+.project-detail-about-financed-items
+  display: flex
+  align-items: flex-start
+  padding-top: 36px
+  border-top: 1px solid rgba(156, 156, 156, 0.30)
+
+.project-detail-about-item-text
+  font-family: $Poppins_Medium
+  font-size: 14px
+  line-height: 142.857%
+  color: $color_black
+  text-transform: uppercase
+
+.project-detail-about-item
+  margin-right: 90px
+  &:last-child
+    margin-right: 0
+
+.project-detail-about-item-image
+  margin: 0
+  margin-top: 9px
+
+.project-detail-about-item-img
+  +imgauto
+  margin: 0
+
+.project-detail-about-content
+  width: 62%
+  padding-top: 29px
+  padding-left: 51px
+  padding-bottom: 50px
+  background-color: $color_lightblue3
+  border-radius: 10px 0 0 0
+  margin-top: -120px
+  position: relative
+  z-index: 4
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 100%
+    width: 100%
+    height: 100%
+    background-color: $color_lightblue3
+
+.project-detail-about-list-items
+  display: flex
+  justify-content: space-between
+
+.project-detail-about-list-item
+  &.--advance
+    display: flex
+    align-items: center
+    .project-detail-about-list-item-label
+      margin: 0
+      width: 75px
+      padding-left: 15px
+
+.project-detail-about-list-item-label
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black3
+  margin: 0
+  margin-bottom: 2px
+
+.project-detail-about-list-item-val
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_black3
+  display: flex
+  align-items: center
+  ._icon
+    margin-right: 6px
+
+.project-detail-about-list-item-big
+  font-family: $Poppins_Bold
+  font-size: 32px
+  line-height: 133.333%
+  color: $color_black3
+
+.project-detail-about-list-item-icon
+  width: 55px
+  height: 55px
+  position: relative
+  display: block
+  margin: 0
+
+.project-detail-about-list-item-icon-txt
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+.project-detail-about-list-item-icon-txt
+  display: flex
+  align-items: center
+  ._symbol1
+    font-family: $Poppins_SemiBold
+    font-size: 18px
+    line-height: 133.333%
+    color: $color_black3
+  ._symbol2
+    font-family: $Poppins_Bold
+    font-size: 12px
+    line-height: 133.333%
+    color: $color_black3
+
+.project-detail-about-video
+  margin-top: 82px
+  border-radius: 10px
+  overflow: hidden
+
+.project-detail-about-video-video
+  width: 100%
+  height: 100%
+
+.project-detail-about-list-items--mobile
+  display: none
+
+@media #{$max_1280}
+  .project-detail-about-list-items
+    flex-wrap: wrap
+
+  .project-detail-about-list-item
+    width: 48%
+    margin: 10px 0
+    margin-right: 4%
+    &:nth-child(2n+2)
+      margin-right: 0
+
+  .project-detail-about-video
+    margin-top: 40px
+
+  .project-detail-about-content
+    width: 55%
+
+  .project-detail-about-info
+    width: 45%
+
+  .project-detail-about-info-content
+    padding: 0
+
+@media #{$max_1024}
+  .project-detail-about-title
+    padding-top: 50px
+
+  .project-detail-about-detail
+    margin-right: 30px
+
+  .project-detail-about-content
+    padding-top: 54px
+    padding-bottom: 40px
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      right: -100%
+      width: 100%
+      height: 100%
+      background-color: $color_lightblue3
+
+  .project-detail-about-info
+    padding-right: 0
+
+@media #{$max_767}
+  .project-detail-about-buttons
+    display: flex
+    .general-button-text
+      white-space: nowrap
+      padding-bottom: 33px
+
+  .project-detail-about-financed-items
+    padding-top: 26px
+
+  .project-detail-about-info
+    padding-bottom: 50px
+
+  .project-detail-about-video
+    margin-top: 0
+
+//areas
+.project-detail-about-areas
+  padding-top: 60px
+
+.project-detail-about-areas-title
+  margin-bottom: 5px
+
+.project-detail-about-areas-title-text
+  font-family: $Poppins_Medium
+  font-size: 34px
+  line-height: 123.529%
+  color: $color_black3
+  margin: 0
+
+.project-detail-about-areas-items
+  display: flex
+  flex-wrap: wrap
+
+.project-detail-about-areas-item
+  display: flex
+  align-items: center
+  width: 22%
+  margin-right: 4%
+  padding: 35px 0
+  &:nth-child(4n+4)
+    margin-right: 0
+
+.project-detail-about-areas-item-image
+  margin: 0
+
+.project-detail-about-areas-item-img
+  +imgauto
+
+.project-detail-about-areas-item-text
+  font-family: $Poppins_Regular
+  font-size: 18px
+  line-height: 133.333%
+  color: $color_black3
+  padding-left: 20px
+
+@media #{$max_1280}
+  .project-detail-about-areas-item
+    width: 32%
+    margin-right: 2% !important
+    &:nth-child(3n+3)
+      margin-right: 0 !important
+
+  .project-detail-about-info
+    padding-top: 65px
+
+@media #{$max_1024}
+  .project-detail-about-info-content
+    flex-wrap: wrap
+    padding: 0
+
+  .project-detail-about-info
+    width: 100%
+    padding-top: 0
+
+  .project-detail-about-content
+    width: 100%
+    margin-top: 0
+    padding-left: 0
+    position: relative
+    border-radius: 0
+    &::before
+      content: " "
+      position: absolute
+      top: 0
+      left: -100%
+      width: 100%
+      background-color: $color_lightblue3
+
+  .project-detail-about-list-items
+    display: none
+
+  .project-detail-about-list-items--mobile
+    display: flex
+    background-color: $color_lightblue3
+    position: relative
+    padding-top: 18px
+    padding-bottom: 22px
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: -100%
+      width: 100%
+      height: 100%
+      background-color: $color_lightblue3
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      right: -100%
+      width: 100%
+      height: 100%
+      background-color: $color_lightblue3
+
+  .project-detail-about-list-item
+    margin-top: 18px
+    margin-bottom: 18px
+
+  .project-detail-about-list-item-big
+    font-size: 30px
+
+  .project-detail-about-areas
+    padding-top: 50px
+
+@media #{$max_767}
+  .project-detail-about-areas-title
+    padding-bottom: 12px
+
+  .project-detail-about-list-item-big
+    font-size: 28px
+
+  .project-detail-about-areas
+    padding-top: 40px
+
+  .project-detail-about-areas-item
+    width: 48%
+    margin-right: 4% !important
+    &:nth-child(3n+3)
+      margin-right: 4% !important
+    &:nth-child(even)
+      margin-right: 0 !important
+
+  .project-detail-about-areas-item-text
+    font-size: 16px
+
+  .project-detail-about-areas-item
+    padding: 25px 0
+
+//Galeria
+.project-detail-gallery
+  padding-top: 81px
+  padding-bottom: 100px
+
+.project-detail-gallery
+  .general-title-subtitle
+    margin-top: 8px
+
+.project-detail-gallery-title-tab
+  margin-bottom: 34px
+
+.project-detail-gallery-title-tab-container
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+
+.project-detail-gallery-title
+  width: 45%
+
+.project-detail-gallery-tab
+  width: 50%
+  display: flex
+  justify-content: flex-end
+
+.project-detail-gallery-tab-links-ul
+  display: flex
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 2px
+    width: 100%
+    background-color: $color_grey6
+    z-index: -1
+
+.project-detail-gallery-tab-link
+  font-family: $Poppins_SemiBold
+  font-size: 16px
+  line-height: 150%
+  color: $color_grey5
+  margin-right: 40px
+  padding: 0 8px 12px 8px
+  box-sizing: border-box
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 2px
+    background-color: $color_lightblue
+    transition: $transition
+    z-index: 1
+    +hide
+  &:last-child
+    margin-right: 0
+  &:hover
+    color: $color_black3
+    &::before
+      +show
+  &.---active
+    color: $color_black3
+    &::before
+      +show
+
+.project-detail-gallery-tab-content
+  width: calc(100% - 100px)
+  margin-right: auto
+  margin-left: 0
+  border-radius: 0 10px 10px 0
+  overflow: hidden
+  position: relative
+
+.project-detail-gallery-tab-content-item
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  +hide
+  transition: $transition
+  &.---active
+    position: relative
+    +show
+
+.project-detail-gallery-tab-carrousel-top
+  position: relative
+
+.project-detail-gallery-tab-carrousel-top-item
+  position: relative
+
+.project-detail-gallery-tab-carrousel-top-item-image
+  height: 599px
+  +bgcover
+  position: relative
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 72.83%, rgba(0, 0, 0, 0.70) 100%)
+
+.project-detail-gallery-tab-carrousel-top-item-content
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 3
+
+.project-detail-gallery-tab-carrousel-thumbnail-item-image
+  height: 80px
+  +bgcover
+
+.project-detail-gallery-tab-carrousel-top-item-pagination-text
+  display: inline-block
+  position: absolute
+  bottom: 36px
+  left: 136px
+
+.project-detail-gallery-tab-carrousel-top-item-pagination
+  font-family: $Poppins_Light
+  font-size: 12px
+  color: $color_white
+  .swiper-pagination-current
+    font-family: $Poppins_SemiBold
+    color: $color_white
+    font-size: 24px
+  .swiper-pagination-total
+    font-family: $Poppins_SemiBold
+    color: $color_white
+    font-size: 16px
+
+.project-detail-gallery-tab-carrousel-top-item-text
+  font-family: $Poppins_Medium
+  color: $color_white
+  line-height: 121.429%
+  font-size: 28px
+  margin-top: 10px
+
+.project-detail-gallery-tab-carrousel-top-item-arrows
+  position: absolute
+  bottom: 40px
+  right: 36px
+  z-index: 5
+  .general-arrow
+    margin-right: 13px
+    &:last-child
+      margin-right: 0
+
+.project-detail-gallery-tab-carrousel-top-icon
+  width: 60px
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $color_white
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 22px
+  cursor: pointer
+
+.project-detail-gallery-tab-carrousel-thumbnail
+  max-width: 500px
+  width: 100%
+  margin: auto
+  margin-top: -40px
+  z-index: 5
+  .swiper-wrapper
+    justify-content: center
+
+.project-detail-gallery-tab-carrousel-thumbnail-item-image
+  cursor: pointer
+  border-radius: 5px
+
+@media #{$max_1450}
+  .project-detail-gallery-tab-content
+    width: 100%
+
+  .project-detail-gallery-tab-carrousel-top-item-pagination-text
+    left: 30px
+
+  .project-detail-gallery-tab-carrousel-top-item-arrows
+    right: 30px
+
+  .project-detail-gallery-title
+    width: 40%
+
+@media #{$max_1024}
+  .project-detail-gallery
+    padding-top: 70px
+    padding-bottom: 70px
+
+  .project-detail-gallery-title-tab-container
+    flex-wrap: wrap
+
+  .project-detail-gallery-title
+    width: 100%
+
+  .project-detail-gallery-tab
+    width: 100%
+    justify-content: flex-start
+    margin-top: 24px
+
+@media #{$max_767}
+  .project-detail-gallery
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .project-detail-gallery-tab-content
+    border-radius: 0
+
+  .project-detail-gallery-tab-carrousel-thumbnail
+    display: none
+
+  .project-detail-gallery-tab-carrousel-top-item-pagination-text
+    left: 14px
+    bottom: 19px
+
+  .project-detail-gallery-tab-carrousel-top-item-image
+    height: 250px
+
+  .project-detail-gallery-tab-carrousel-top-item-text
+    font-size: 20px
+    margin-top: 7px
+
+  .project-detail-gallery-tab-carrousel-top-item-arrows
+    position: static
+    z-index: 6
+    margin-top: 11px
+    justify-content: center
+
+//Quote
+.project-detail-quote-form-carrousel-block
+  display: flex
+  justify-content: space-between
+
+.project-detail-quote-form
+  background-color: $color_blue
+  padding-top: 71px
+  padding-bottom: 87px
+  padding-right: 76px
+  box-sizing: border-box
+  width: 46%
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 100%
+    width: 100%
+    height: 100%
+    background-color: $color_blue
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 100%
+    width: 100%
+    height: 100%
+    background-color: $color_blue
+    +hide
+  .form-block-pie
+    margin-top: 5px
+  .form-block-checkbox
+    margin-top: 10px
+  .form-block-button
+    .general-button
+      max-width: 125px
+      width: 100%
+      margin: 0
+    .general-button-text
+      width: 100%
+
+.project-detail-quote-form-title
+  margin-bottom: 22px
+  .general-title-text
+    margin-top: 4px
+
+.project-detail-quote-form-title-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_white
+  margin: 0
+
+.project-detail-quote-carrousel
+  width: 54%
+  padding-left: 75px
+  padding-top: 102px
+  box-sizing: border-box
+
+.project-detail-quote-carrousel-slide
+  overflow: hidden
+
+.project-detail-quote-carrousel-arrows
+  margin-top: 33px
+  justify-content: flex-end
+  .general-arrow
+    margin-right: 13px
+    &:last-child
+      margin-right: 0
+
+.project-detail-quote-carrousel-item-image
+  margin: 0
+  display: block
+  position: relative
+
+.project-detail-quote-carrousel-item-img
+  +imgfull
+
+.project-detail-quote-carrousel-item-icon
+  width: 60px
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: $color_white
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 22px
+
+@media #{$max_1366}
+  .project-detail-quote-form
+    padding-top: 50px
+    padding-bottom: 50px
+    padding-right: 50px
+
+  .project-detail-quote-carrousel
+    padding-left: 50px
+    padding-top: 50px
+
+@media #{$max_1024}
+  .project-detail-quote-banner .main-banner-info-content
+    padding-top: 70px
+    padding-bottom: 45px
+
+@media #{$max_960}
+  .project-detail-quote-form-carrousel-block
+    flex-wrap: wrap
+
+  .project-detail-quote-form
+    width: 100%
+    padding-right: 0
+    &::after
+      +show
+
+  .project-detail-quote-carrousel
+    width: 100%
+    padding-left: 0
+    padding-top: 50px
+    padding-bottom: 50px
+
+@media #{$max_767}
+  .project-detail-quote-carrousel-item-icon
+    width: 50px
+    height: 50px
+    font-size: 18px
+
+//360
+.project-detail-360-item
+  position: relative
+  &.--show
+    .project-detail-360-iframe
+      +show
+    .project-detail-360-background
+      +hide
+
+.project-detail-360-background
+  height: 600px
+  +bgcover
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  z-index: 2
+  transition: $transition
+
+.project-detail-360-info
+  max-width: 351px
+  width: 100%
+  margin: 0 auto
+  width: 100%
+  text-align: center
+  cursor: pointer
+
+.project-detail-360-title
+  margin-top: 11px
+
+.project-detail-360-title-text
+  font-family: $Poppins_Regular
+  font-size: 34px
+  line-height: 123.529%
+  color: $color_white
+  margin: 0
+
+.project-detail-360-iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  +hide
+  transition: $transition
+  z-index: 1
+
+.project-detail-360-icon
+  display: inline-block
+
+@media #{$max_1024}
+  .project-detail-360-background
+    height: 500px
+
+  .project-detail-360-title-text
+    font-size: 30px
+
+  .project-detail-360-icon
+    svg
+      width: 85px
+      height: 85px
+
+@media #{$max_767}
+  .project-detail-360-background
+    height: 350px
+
+  .project-detail-360-info
+    max-width: 200px
+
+  .project-detail-360-icon
+    svg
+      width: 55px
+      height: 55px
+
+  .project-detail-360-title
+    margin-top: 10px
+
+  .project-detail-360-title-text
+    font-size: 18px
+
+//Asesor
+.project-detail-asesor
+  padding-top: 65px
+
+.project-detail-asesor-title-carrousel
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.project-detail-asesor-title
+  width: 450px
+
+.project-detail-asesor-carrousel
+  overflow: hidden
+  width: 640px
+  height: 80px
+  position: relative
+  padding-right: 50px
+  box-sizing: border-box
+
+.project-detail-asesor-pagination
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 5
+  &.general-pagination-slide.--type1 .swiper-pagination-bullet
+    height: 25px
+    width: 25px
+    margin: 5px 0
+  &.general-pagination-slide.--type1 .swiper-pagination-bullet::before
+    width: 5px
+    height: 5px
+
+.project-detail-asesor-item-details
+  display: flex
+  align-items: center
+  padding-left: 60px
+  box-sizing: border-box
+
+.project-detail-asesor-item
+  display: flex
+
+.project-detail-asesor-item-image-info
+  display: flex
+  align-items: center
+
+.project-detail-asesor-item-image
+  width: 80px
+  height: 80px
+  margin: 0
+
+.project-detail-asesor-item-info
+  padding-left: 24px
+  box-sizing: border-box
+
+.project-detail-asesor-item-name
+  font-family: $Poppins_SemiBold
+  font-size: 20px
+  line-height: 100%
+  color: $color_black
+
+.project-detail-asesor-item-charge
+  font-family: $Poppins_Medium
+  font-size: 14px
+  line-height: 142.857%
+  color: $color_blue6
+  letter-spacing: 2px
+  text-transform: uppercase
+  margin-top: 4px
+
+.project-detail-asesor-item-detail-item
+  width: 55px
+  height: 55px
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $color_lightblue
+  border-radius: 100%
+  margin-right: 15px
+  &:last-child
+    margin-right: 0
+
+@media #{$max_1280}
+  .project-detail-asesor-item-details
+    padding-left: 30px
+
+  .project-detail-asesor-title
+    width: 380px
+
+  .project-detail-asesor-carrousel
+    width: 580px
+
+@media #{$max_960}
+  .project-detail-asesor-title-carrousel
+    flex-wrap: wrap
+
+  .project-detail-asesor-title
+    width: 100%
+
+  .project-detail-asesor-carrousel
+    width: 100%
+    margin-top: 25px
+    padding-right: 0
+
+@media #{$max_767}
+  .project-detail-asesor
+    padding-top: 46px
+
+  .project-detail-asesor-item
+    flex-wrap: wrap
+    flex-direction: column
+
+  .project-detail-asesor-carrousel
+    height: auto
+
+  .project-detail-asesor-item-image-info
+    justify-content: center
+
+  .project-detail-asesor-item-details
+    justify-content: center
+    padding-left: 0
+    margin-top: 20px
+
+  .project-detail-asesor-pagination
+    position: static
+    text-align: center
+    margin-top: 20px
+
+//rel
+.project-detail-rel
+  padding-bottom: 75px
+
+.project-detail-rel-title-button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 37px
+
+.project-detail-rel-items
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.project-detail-rel-item
+  width: 100%
+  margin: 0
+
+.project-rel-carrousel-pagination
+  margin-top: 27px
+  text-align: center
+
+@media #{$max_1024}
+  .project-detail-rel
+    padding-bottom: 70px
+
+@media #{$max_767}
+  .project-detail-rel
+    padding-bottom: 34px
+
+  .project-detail-rel-title-button
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+    display: none
+
+  .project-detail-rel-button
+    margin-top: 20px
+
+/** Projects **/
+//Baner
+.projects-page-banner
+  padding-top: 125px
+  padding-bottom: 110px
+
+.projects-page-banner-title
+  max-width: 795px
+  width: 100%
+  margin-right: auto
+  margin-left: 0
+  .general-title-subtitle
+    margin-top: 20px
+
+@media #{$max_1024}
+  .projects-page-banner
+    padding-top: 75px
+    padding-bottom: 65px
+
+@media #{$max_767}
+  .projects-page-banner
+    padding-top: 60px
+    padding-bottom: 50px
+
+//filter
+.projects-page-filter
+  padding-bottom: 50px
+
+.projects-page-filter-menu
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.projects-page-filter-empty
+  display: flex
+  align-items: center
+  cursor: pointer
+  margin: 0
+  ._text
+    font-family: $Poppins_Medium
+    font-size: 14px
+    line-height: 142.857%
+    color: $color_black3
+    letter-spacing: 2px
+    text-transform: uppercase
+  ._icon
+    margin-left: 3px
+
+.projects-page-filter-selects
+  display: flex
+  align-items: center
+  float: right
+
+.projects-page-filter-select
+  margin-right: 54px
+  width: 250px
+  &:last-child
+    margin-right: 0
+
+.projects-page-filter-items
+  display: flex
+  flex-wrap: wrap
+  margin-top: 68px
+
+.projects-page-filter-item
+  width: 30%
+  margin-right: 5%
+  margin-bottom: 4%
+  &:nth-child(3n+3)
+    margin-right: 0
+
+@media #{$max_1024}
+  .projects-page-filter-select
+    width: 220px
+    margin-right: 50px
+
+  .projects-page-filter-item
+    width: 48%
+    margin-right: 4% !important
+    margin-bottom: 3%
+    &:nth-child(2n+2)
+      margin-right: 0 !important
+
+  .projects-page-filter-items
+    margin-top: 55px
+
+@media #{$max_767}
+  .projects-page-filter
+    padding-bottom: 60px
+
+  .projects-page-filter-menu
+    padding-bottom: 0
+
+  .projects-page-filter-menu
+    flex-direction: column-reverse
+    align-items: flex-start
+
+  .projects-page-filter-selects
+    flex-direction: column
+    align-items: flex-start
+    flex-wrap: wrap
+    width: 100%
+
+  .projects-page-filter-select
+    width: 100%
+    margin-right: 0
+
+  .projects-page-filter-empty
+    margin-top: 30px
+
+  .projects-page-filter-items
+    margin-top: 55px
+
+  .projects-page-filter-item
+    width: 100%
+    margin-right: 0 !important
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+  .projects-page-filter-items
+    margin-top: 50px
+
+//Location
+.projects-location
+  .location-general
+    padding-top: 83px

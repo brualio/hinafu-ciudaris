@@ -1,0 +1,219 @@
+
+.events-page-banner-image-details-form
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat
+//Banner
+.events-page-banner
+  padding-top: 92px
+  .main-banner-info-content
+    padding-bottom: 35px
+  .main-banner-figure
+    padding-bottom: 35px
+
+.events-page-banner-title
+  .general-title-subtitle
+    margin-top: 15px
+
+@media #{$max_1024}
+  .events-page-banner
+    padding-top: 70px
+    .main-banner-info-content
+      padding-bottom: 45px
+
+@media #{$max_767}
+  .events-page-banner
+    padding-top: 65px
+    .main-banner-info-content
+      padding-bottom: 45px
+
+//Image
+.events-page-image-image
+  margin: 0
+
+.events-page-image-img
+  +imgauto
+
+//Details Form
+.events-page-details-form
+  padding-top: 59px
+  padding-bottom: 24px
+
+.events-page-details-form-block
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.events-page-form
+  width: 42.858%
+  background-color: $color_blue
+  border-radius: 10px
+  padding: 44px 30px
+  margin-bottom: 90px
+  box-sizing: border-box
+  .form-block-button
+    margin-top: 22px
+    .general-button
+      width: 139.795px
+      .general-button-text
+        width: 100%
+  .form-block-checkbox
+    margin-top: 10px
+
+.events-page-details
+  width: 49.5%
+
+.events-page-details-title
+  padding-bottom: 30px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $color_grey
+
+.events-page-details-description
+  padding-top: 43px
+
+.events-page-details-description-title-text
+  font-family: $Poppins_Medium
+  font-size: 14px
+  line-height: 142.857%
+  color: $color_blue8
+  letter-spacing: 2px
+  margin: 0
+
+.events-page-details-description-description
+  margin-top: 15px
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 150%
+  color: $color_black
+  p:last-child
+    margin-bottom: 0
+
+.events-page-details-title-text
+  font-family: $Poppins_Medium
+  font-size: 34px
+  line-height: 123.529%
+  color: $color_black2
+  margin: 0
+
+.events-page-details-description-items
+  padding-top: 30px
+
+.events-page-details-description-item
+  position: relative
+
+.events-page-details-description-item-icon
+  position: absolute
+  top: 4px
+  left: 0
+  width: 16px
+  height: 16px
+  overflow: hidden
+
+.events-page-details-description-item-text
+  font-family: $Poppins_Regular
+  font-size: 16px
+  line-height: 175%
+  color: $color_black6
+  margin: 0
+  padding-left: 24px
+  box-sizing: border-box
+
+.events-page-details-marker
+  margin-top: 22px
+
+@media #{$max_1366}
+  .events-page-details
+    width: 48%
+
+  .events-page-form
+    width: 47%
+
+@media #{$max_1024}
+  .events-page-details-title-text
+    font-size: 30px
+
+  .events-page-form
+    margin-bottom: 75px
+
+@media #{$max_960}
+  .events-page-details-form-block
+    flex-wrap: wrap
+
+  .events-page-details
+    width: 100%
+    padding-bottom: 40px
+
+  .events-page-form
+    width: 100%
+
+@media #{$max_767}
+  .events-page-details-title-text
+    font-size: 28px
+
+  .events-page-form
+    margin-bottom: 45px
+    padding: 40px 20px
+
+//Projects
+.events-page-projects
+  padding-top: 59px
+  padding-bottom: 45px
+
+.events-page-project-title-button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 45px
+
+.events-page-projects-items
+  display: flex
+  flex-wrap: wrap
+
+.events-page-projects-item
+  width: 31%
+  margin-right: 3.5%
+  margin-bottom: 3%
+  &:nth-child(3n+3)
+    margin-right: 0
+
+@media #{$max_1024}
+  .events-page-projects
+    padding-bottom: 70px
+
+  .events-page-projects-item
+    width: 48%
+    margin-right: 4% !important
+    margin-bottom: 3%
+    &:nth-child(2n+2)
+      margin-right: 0 !important
+
+@media #{$max_960}
+  .events-page-project-title-button
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+
+  .events-page-project-button
+    margin-top: 25px
+
+@media #{$max_767}
+  .events-page-projects
+    padding-top: 60px
+    padding-bottom: 60px
+
+  .events-page-project-title
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+
+  .events-page-projects-item
+    width: 100%
+    margin-right: 0 !important
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0

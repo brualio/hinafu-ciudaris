@@ -1,0 +1,210 @@
+.main-burguer
+	display: block
+	width: 25px
+	height: 20px
+	position: relative
+	cursor: pointer
+	> span
+		display: block
+		width: 100%
+		height: 2px
+		background: blue
+		transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1)
+
+.main-burguer
+	// icon
+	&.--icon
+		transition: $transition
+		display: flex
+		align-items: center
+		justify-content: center
+		background: red
+		color: white
+	// line
+	&.--line
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
+
+		span:nth-child(2)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: -8px
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+
+	&.--line:not(.--no-hover):hover
+		span:nth-child(2)
+			right: 0
+
+	&.--line.---active
+		span:nth-child(2)
+			right: 0
+
+	// inline
+	&.--inline
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
+			width: 60%
+
+		span:nth-child(2)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 80%
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+
+	&.--inline:not(.--no-hover):hover
+		span:nth-child(2)
+			width: 100%
+		span:nth-child(1)
+			width: 100%
+
+	&.--inline.---active
+		span:nth-child(2)
+			width: 100%
+		span:nth-child(1)
+			width: 100%
+
+	// inline reverse
+	&.--inline-reverse
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			right: 0
+			width: 60%
+
+		span:nth-child(2)
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 80%
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+
+	&.--inline-reverse:not(.--no-hover):hover
+		span:nth-child(2)
+			width: 100%
+		span:nth-child(1)
+			width: 100%
+
+	&.--inline-reverse.---active
+		span:nth-child(2)
+			width: 100%
+		span:nth-child(1)
+			width: 100%
+
+	// close
+	&.--open-close
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
+
+		span:nth-child(2)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+
+	&.--open-close:not(.--no-hover):hover
+		span:nth-child(2)
+			opacity: 0
+		span:nth-child(1)
+			transform: rotate(45deg)
+			top: 50%
+		span:nth-child(3)
+			transform: rotate(-45deg)
+			bottom: 45%
+
+	&.--open-close.---active
+		span:nth-child(2)
+			opacity: 0
+		span:nth-child(1)
+			transform: rotate(45deg)
+			top: 50%
+		span:nth-child(3)
+			transform: rotate(-45deg)
+			bottom: 45%
+
+	// more
+	&.--more
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
+
+		span:nth-child(2)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+
+	&.--more:not(.--no-hover):hover
+		span:nth-child(1)
+			transform: rotate(90deg)
+			top: 50%
+		span:nth-child(2)
+			opacity: 0
+		span:nth-child(3)
+			bottom: 45%
+
+	&.--more.---active
+		span:nth-child(1)
+			transform: rotate(90deg)
+			top: 50%
+		span:nth-child(2)
+			opacity: 0
+		span:nth-child(3)
+			bottom: 45%
+
+	// center
+	&.--center
+		span:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			width: 50%
+
+		span:nth-child(2)
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+
+		span:nth-child(3)
+			position: absolute
+			bottom: 0
+			width: 50%
+			left: 0
+			right: 0
+
+	&.--center:not(.--no-hover):hover
+		span:nth-child(1)
+			width: 100%
+		span:nth-child(3)
+			width: 100%
+
+	&.--center.---active
+		span:nth-child(1)
+			width: 100%
+		span:nth-child(3)
+			width: 100%
