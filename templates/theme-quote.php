@@ -128,8 +128,22 @@ document.addEventListener("DOMContentLoaded", () => {
       download: false
     });
   }
+
+  $( 'select[name=proyecto_cotizado]' ).on( 'change', function( e ) {
+    let $modelos_select = $( 'select[name=modelo_cotizado]' );
+    $modelos_select.html( '<option value=""></option>' );
+
+    let option  = $( this ).val();
+    let modelos = projects[option];
+
+    modelos.forEach( function( m ) {
+      $modelos_select.append( '<option value="' + m.label + '">' + m.label + '</option>' );
+    } );
+
+  } );
   
-})
+});
+
 </script>
 
 <?php get_footer(); ?>
