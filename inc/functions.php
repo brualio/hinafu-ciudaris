@@ -87,3 +87,20 @@ function projects_script() {
 }
 
 remove_action( 'wpcf7_swv_create_schema', 'wpcf7_swv_add_select_enum_rules', 20, 2 );
+
+add_filter( 'query_vars', 'add_distrito_filter_var', 0 );
+function add_distrito_filter_var( $vars ) {
+	$vars[] = 'distrito';
+	return $vars;
+}
+
+add_action( 'init', 'py_filter_rewrite_rules', 10 );
+function py_filter_rewrite_rules() {
+	flush_rewrite_rules();
+	add_rewrite_rule( '^venta-departamentos/([^/]*)/?', 'index.php?page_id=32&distrito=$matches[1]', 'top' );
+}
+
+add_action( 'init', 'py_filter_rewrite_tag', 10);
+function py_filter_rewrite_tag() {
+	add_rewrite_tag( '%venta-departamentos%', '([^&]+)' );
+}

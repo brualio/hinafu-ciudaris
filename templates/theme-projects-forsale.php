@@ -39,7 +39,7 @@ $content_pie_projects = $options['content_pie_projects'];
   <form id="filter-g--prueba" action="<?php echo get_permalink() ?>" method="GET" >
   <div class="projects-page-filter-container main-wrapper-container --default2">
     <div class="projects-page-filter-menu">
-      <?php if(!empty($_GET['distrito-proyecto']) || !empty($_GET['categoria-proyecto'])) :?>
+      <?php if(!empty($distrito) || !empty($_GET['categoria-proyecto'])) :?>
       <a class="projects-page-filter-empty" href="<?php echo esc_url( home_url( '/venta-departamentos' ) ); ?>">
         <div class="_text"><?php _e('Limpiar filtro','ciudaris') ?></div>
         <svg class="_icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -58,10 +58,10 @@ $content_pie_projects = $options['content_pie_projects'];
                 <path d="M9.56641 1.5L5.56641 5.5L1.56641 1.5" stroke="#171717" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
               </svg>
             </div>
-            <select class="general-input-field filter-g--cat" name="distrito-proyecto">
+            <select class="general-input-field filter-g--cat" name="distrito-proyecto" id="distrito-proyecto">
               <option value=""><?php _e('Distrito','ciudaris') ?></option>
               <?php foreach ($terms_district as $district) : 
-                $selected = isset($_GET['distrito-proyecto']) && $_GET['distrito-proyecto'] == $district->slug ? ' selected="selected"' : ''; 
+                $selected = $distrito == $district->slug ? ' selected="selected"' : '';
                 echo '<option value="' . esc_attr($district->slug) . '"' . $selected . '>' . esc_html($district->name) . '</option>';
               endforeach; ?>
             </select>
@@ -79,7 +79,7 @@ $content_pie_projects = $options['content_pie_projects'];
                 <path d="M9.56641 1.5L5.56641 5.5L1.56641 1.5" stroke="#171717" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
               </svg>
             </div>
-            <select class="general-input-field filter-g--cat" name="categoria-proyecto">
+            <select class="general-input-field filter-g--cat" name="categoria-proyecto" id="categoria-proyecto">
               <option value="">Estado</option>
               <?php foreach ($terms_category as $category) : 
                 $selected = isset($_GET['categoria-proyecto']) && $_GET['categoria-proyecto'] == $category->slug ? ' selected="selected"' : ''; 
@@ -96,11 +96,12 @@ $content_pie_projects = $options['content_pie_projects'];
 $tax_queries = array();
 $cont = 0;
 
-if (!empty($_GET['distrito-proyecto'])) {		
+$distrito = sanitize_text_field( get_query_var( 'distrito', '' ) );
+if ( ! empty( $distrito ) ) {
   $tax_queries[] = array(
     'taxonomy' => 'distrito-proyecto',
     'field'    => 'slug',
-    'terms'    => sanitize_text_field($_GET['distrito-proyecto']),
+    'terms'    => $distrito,
   );
   ++$cont;
 }
@@ -114,11 +115,12 @@ if (!empty($_GET['categoria-proyecto'])) {
   );
   ++$cont;
 }
+
 if (empty($_GET['distrito-proyecto']) && empty($_GET['categoria-proyecto'])) {
   $tax_queries[] = array(
     'taxonomy' => 'categoria-proyecto',
     'field'    => 'slug',
-    'terms'    => 'entregados',
+    'terms'    => 'entregados', // ¿Solamente muestra los que NO están engregados?
     'operator' => 'NOT IN',
   );
 }
@@ -205,6 +207,12 @@ $wp_query = new WP_Query($args);
       </div>
       <?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
+    </div>
+    <?php else: ?>
+    <div class="projects-page-filter-items">
+      <h4 class="general-title-subtitle-text">
+        <?php _e( 'No se encontró ningún proyecto.', 'ciudaris' ); ?>
+      </h4>
     </div>
     <?php endif ?>
   </div>
